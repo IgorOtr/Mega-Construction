@@ -1,0 +1,48 @@
+.bg-nav {
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.bg-nav .nav-link-title {
+    color: #ffffff;
+}
+
+.nav-link-title{
+    transition: .2s;
+}
+
+.nav-link-title:hover {
+    transition: .2s;
+    border-bottom: 2px solid #FF3A00;
+}
+
+.bg-screen {
+    background-color: #ffffff;
+}
+
+.brd_orange {
+    border-bottom: 2px solid #FF3A00;
+}
+
+.bg_orange {
+    background-color: #FF3A00;
+    color: #141414;
+}
+
+.icon {
+    --tblr-icon-size: 1.75rem;
+}
+
+footer {
+    position: fixed;
+    background-color: #141414;
+    bottom: 0px;
+    padding: 12px;
+    width: 100%;
+}
+
+footer p, a {
+    margin: 0px;
+    font-size: 12px;
+    color: #ffffff;
+}
