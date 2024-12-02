@@ -23,7 +23,8 @@
                             </div>
                             <div class="col">
                                 <label class="form-label">Preço <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control" id="property_price" onchange="formatValue()" value="" name="example-text-input" required>
+                                <input type="text" class="form-control" id="property_price" onchange="formatValue()"
+                                    value="" name="example-text-input" required>
                                 <small style="color: red; font-size: 12px;">Digitar apenas números</small>
                             </div>
                         </div>
@@ -39,19 +40,23 @@
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label">Quartos <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                             <div class="col">
                                 <label class="form-label">Banheiros <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                             <div class="col">
                                 <label class="form-label">Vagas <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                             <div class="col">
                                 <label class="form-label">Área (sqft) <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                         </div>
 
@@ -90,7 +95,8 @@
         </div>
     </div>
 
-    <div class="modal modal-blur fade" id="modal-scrollable-alter" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div class="modal modal-blur fade" id="modal-scrollable-alter" tabindex="-1" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -107,7 +113,8 @@
                             </div>
                             <div class="col">
                                 <label class="form-label">Preço <span style="color: red;">*</span></label>
-                                <input type="text" class="form-control" id="property_price" onchange="formatValue()" value="" name="example-text-input" required>
+                                <input type="text" class="form-control" id="property_price"
+                                    onchange="formatValue()" value="" name="example-text-input" required>
                                 <small style="color: red; font-size: 12px;">Digitar apenas números</small>
                             </div>
                         </div>
@@ -123,19 +130,23 @@
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label">Quartos <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                             <div class="col">
                                 <label class="form-label">Banheiros <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                             <div class="col">
                                 <label class="form-label">Vagas <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                             <div class="col">
                                 <label class="form-label">Área (sqft) <span style="color: red;">*</span></label>
-                                <input type="number" class="form-control" name="example-text-input" required value="0">
+                                <input type="number" class="form-control" name="example-text-input" required
+                                    value="0">
                             </div>
                         </div>
 
@@ -243,8 +254,8 @@
             <div class="col-md-6">
             </div>
             <div class="col-md-3 text-end">
-                <button data-toggle="tooltip" data-bs-title="Adicionar um Imóvel" type="button" class="btn btn-warning" data-bs-toggle="modal"
-                    data-bs-target="#modal-scrollable">
+                <button data-toggle="tooltip" data-bs-title="Adicionar um Imóvel" type="button"
+                    class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="icon">
@@ -263,7 +274,10 @@
                     <div class="card-header">
                         <h3 class="card-title">Título do imóvel</h3>
                         <div class="card-actions">
-                            <button type="button" data-toggle="tooltip" data-bs-title="Apagar Imóvel" class="btn btn-danger text-center" data-bs-toggle="modal" data-bs-target="#modal-danger">
+
+                            <button type="button" data-toggle="tooltip" data-bs-title="Apagar Imóvel"
+                                class="btn btn-danger text-center" data-bs-toggle="modal"
+                                data-bs-target="#modal-danger">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -277,7 +291,9 @@
                                     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                                 </svg>
                             </button>
-                            <button type="" data-toggle="tooltip" data-bs-title="Alterar Imóvel" class="btn btn-primary text-center" data-bs-toggle="modal" data-bs-target="#modal-scrollable-alter">
+                            <button type="" data-toggle="tooltip" data-bs-title="Alterar Imóvel"
+                                class="btn btn-warning text-center" data-bs-toggle="modal"
+                                data-bs-target="#modal-scrollable-alter">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -288,7 +304,25 @@
                                     <path d="M16 5l3 3" />
                                 </svg>
                             </button>
-                            <a href="#" data-toggle="tooltip" data-bs-title="Ver detalhes" class="btn btn-secondary text-center">
+                            <button type="button" data-toggle="tooltip" data-bs-title="Adicionar Imagens"
+                                class="btn btn-primary text-center" data-bs-toggle="modal"
+                                data-bs-target="#modal-danger">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-photo-plus m-0">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M15 8h.01" />
+                                    <path d="M12.5 21h-6.5a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v6.5" />
+                                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l4 4" />
+                                    <path d="M14 14l1 -1c.67 -.644 1.45 -.824 2.182 -.54" />
+                                    <path d="M16 19h6" />
+                                    <path d="M19 16v6" />
+                                </svg>
+                            </button>
+                            <a href="#" data-toggle="tooltip" data-bs-title="Ver detalhes"
+                                class="btn btn-secondary text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -315,7 +349,6 @@
     </div>
 
     <script>
-
         async function formatValue() {
 
             var property_price = document.getElementById('property_price');
@@ -329,7 +362,6 @@
             property_price.value = formated_number;
 
         }
-
     </script>
 
 </body>

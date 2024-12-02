@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,8 @@ Route::group(['prefix' => 'Admin'], function() {
         return view('admin.properties');
     })->middleware(['auth', 'verified'])->name('properties');
 
-    Route::get('/categories', function () {
-        return view('admin.categories');
-    })->middleware(['auth', 'verified'])->name('categories');
+    Route::get('/categories', [CategoryController::class, 'index'])->middleware(['auth', 'verified'])->name('categories');
+    Route::post('/add-category', [CategoryController::class,'store'])->middleware(['auth', 'verified'])->name('categories.store');
 
 });
 

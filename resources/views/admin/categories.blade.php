@@ -24,13 +24,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Paweł Kuna</td>
-                                    <td class="text-secondary">
-                                        UI Designer, Training
-                                    </td>
-                                    <td class="text-secondary"><a href="#"class="text-reset">Acessar</a></td>
-                                </tr>
+
+                                @foreach ($categories as $category)
+                                    <tr>
+                                        <td>{{ $category->category_name }}</td>
+                                        <td class="text-secondary">
+                                            9
+                                        </td>
+                                        <td class="text-secondary"><a href="#"class="text-reset">Acessar</a></td>
+                                    </tr>
+                                @endforeach
+
                             </tbody>
                         </table>
                     </div>
@@ -40,14 +44,15 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Nova Categoria</h3>
-                            <form action="">
-                                <div class="form-group mb-3">
-                                    <label class="form-label">Nome da Categoria</label>
-                                    <input type="text" class="form-control mt-3">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Adicionar Categoria</button>
-                            </form>
-                            </form>
+                        <form action="{{ route('categories.store') }}" method="POST">
+                            @csrf
+                            <div class="form-group mb-3">
+                                <label class="form-label">Nome da Categoria</label>
+                                <input type="text" name="category_name" class="form-control mt-3">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Adicionar Categoria</button>
+                        </form>
+                        </form>
                     </div>
                 </div>
             </div>
