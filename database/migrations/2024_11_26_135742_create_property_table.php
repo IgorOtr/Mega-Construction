@@ -11,8 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('property', function (Blueprint $table) {
+        Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->string('p_title');
+            $table->string('p_price');
+            $table->string('p_address');
+            $table->string('p_bedroom');
+            $table->string('p_bathroom');
+            $table->string('p_parking');
+            $table->string('p_area');
+            $table->longText('p_description');
+            $table->string('p_cover_img');
+            $table->string('p_zillow_url');
+            $table->string('p_category');
+            $table->string('p_status');
+            $table->string('p_slug');
             $table->timestamps();
         });
     }
@@ -22,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('property');
+        Schema::dropIfExists('properties');
     }
 };

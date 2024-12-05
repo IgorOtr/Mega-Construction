@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PropertyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,12 +15,15 @@ Route::group(['prefix' => 'Admin'], function() {
         return view('admin.index');
     })->middleware(['auth', 'verified'])->name('dashboard');
 
-    Route::get('/properties', function () {
-        return view('admin.properties');
-    })->middleware(['auth', 'verified'])->name('properties');
+    Route::get('/properties', [PropertyController::class, 'index'])->middleware(['auth', 'verified'])->name('properties');
+    Route::post('/add-property', [PropertyController::class,'store'])->middleware(['auth', 'verified'])->name('properties.store');
+    Route::post('/delete-property', [PropertyController::class, 'destroy'])->middleware(['auth', 'verified'])->name('properties.destroy');
+    Route::post('/edit-property', [PropertyController::class, 'update'])->middleware(['auth', 'verified'])->name('properties.edit');
 
     Route::get('/categories', [CategoryController::class, 'index'])->middleware(['auth', 'verified'])->name('categories');
     Route::post('/add-category', [CategoryController::class,'store'])->middleware(['auth', 'verified'])->name('categories.store');
+    Route::post('/delete-category', [CategoryController::class, 'destroy'])->middleware(['auth', 'verified'])->name('categories.destroy');
+    Route::post('/edit-category', [CategoryController::class, 'update'])->middleware(['auth', 'verified'])->name('categories.edit');
 
 });
 
