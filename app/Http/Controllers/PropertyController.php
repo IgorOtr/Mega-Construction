@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Property;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use App\Models\PropertyGallery;
 
 class PropertyController extends Controller
 {
@@ -20,18 +21,18 @@ class PropertyController extends Controller
     }
 
     public function toAscii($str, $replace = array(), $delimiter = '-')
-	{
-		if (!empty($replace)) {
-			$str = str_replace((array)$replace, ' ', $str);
-		}
-		$clean = str_replace('�', 'c', $str);
-		$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
-		$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
-		$clean = strtolower(trim($clean, '-'));
-		$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+    {
+        if (!empty($replace)) {
+            $str = str_replace((array)$replace, ' ', $str);
+        }
+        $clean = str_replace('�', 'c', $str);
+        $clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
+        $clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+        $clean = strtolower(trim($clean, '-'));
+        $clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
 
-		return $clean;
-	}
+        return $clean;
+    }
 
 
     /**
@@ -68,8 +69,7 @@ class PropertyController extends Controller
         if ($properties->save()) {
 
             return redirect()->route('properties')->with(['success', 'Imóvel adicionado com sucesso!']);
-
-        }else{
+        } else {
 
             return redirect()->route('properties')->with(['error', 'Erro ao adicionar imóvel. Tente novamente.']);
         }
@@ -103,7 +103,7 @@ class PropertyController extends Controller
             $img = $request->file('p_cover_img');
             $img_name = md5(time()) . '.' . $img->getClientOriginalExtension();
 
-            unlink(public_path('assets/images/properties_img/'.$properties->p_cover_img));
+            unlink(public_path('assets/images/properties_img/' . $properties->p_cover_img));
 
             $img->move('assets/images/properties_img', $img_name);
 
@@ -115,9 +115,7 @@ class PropertyController extends Controller
         if ($properties->save()) {
 
             return redirect()->route('properties')->with(['success', 'Imóvel alterado com sucesso!']);
-
-
-        }else{
+        } else {
 
             return redirect()->route('properties')->with(['error', 'Erro ao alterar imóvel. Tente novamente.']);
         }
@@ -133,14 +131,42 @@ class PropertyController extends Controller
         if (!$property) {
             return abort(404);
         }
-        
-        unlink(public_path('assets/images/properties_img/'.$property->p_cover_img));
+
+        unlink(public_path('assets/images/properties_img/' . $property->p_cover_img));
 
         $property->delete();
 
         sleep(1);
 
         return redirect()->route('properties')->with('success', 'Imóvel excluído com sucesso!');
+    }
 
+    /**
+     * METODOS PARA GALERIA DE IMAGENS DOS IMÓVEIS
+     */
+
+    public function addGallery(Request $request, PropertyGallery $propertyGallery)
+    {
+
+        $img = $request->file('p_images');
+
+        for ($i = 0; $i < count($img); $i++) {
+
+            $imgs = $img[$i];
+            $imgs_name = md5(time()) . '.' . $imgs->getClientOriginalExtension();
+
+            if ($imgs->move('assets/images/properties_img', $imgs_name)) {
+
+                $propertyGallery->img_name = $imgs_name;
+                $propertyGallery->property_id = $request->p_id;
+
+                $image = $propertyGallery::create([
+                    "img_name" => $imgs_name,
+                    "property_id" => $request->p_id
+                ]);
+
+                sleep(1);
+            }
+        }
     }
 }

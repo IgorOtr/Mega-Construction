@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('img_properties', function (Blueprint $table) {
+        Schema::create('property_galleries', function (Blueprint $table) {
             $table->id();
             $table->string('property_id');
             $table->string('img_name');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('img_properties');
+        Schema::dropIfExists('property_galleries');
     }
 };

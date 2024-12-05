@@ -207,33 +207,6 @@
         </div>
     </div>
 
-    <div class="modal modal-blur fade" id="modal-simple" tabindex="-1" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Adicione imagens a este imóvel</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <div class="form-label">Selecione as imagens que deseja adicionar</div>
-                            <input type="file" class="form-control" accept="image/*" id="gallery-photo-add"
-                                multiple>
-                            <span style="color: red; font-size: 12px;">Tamanho máximo: 2MB</span>
-                        </div>
-                    </form>
-
-                    <div class="gallery"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="d-none alert alert-important alert-warning alert-dismissible" style="" role="alert">
         <div class="d-flex">
             <div>
@@ -331,7 +304,7 @@
                                     {{-- ADICIONAR FOTOS --}}
                                     <button type="button" data-toggle="tooltip" data-bs-title="Adicionar Imagens"
                                         class="btn btn-primary text-center" data-bs-toggle="modal"
-                                        data-bs-target="#modal-simple">
+                                        data-bs-target="#modal-simple{{ $property->id }}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -379,7 +352,8 @@
 
                     {{-- MODAIS --}}
 
-                    <div class="modal modal-blur fade" id="modal-danger{{ $property->id }}" tabindex="-1" style="display: none;" aria-hidden="true">
+                    <div class="modal modal-blur fade" id="modal-danger{{ $property->id }}" tabindex="-1"
+                        style="display: none;" aria-hidden="true">
                         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -409,7 +383,8 @@
                                             <div class="col">
                                                 <form action="{{ route('properties.destroy') }}" method="POST">
                                                     @csrf
-                                                    <input type="hidden" name="p_id" value="{{ $property->id }}">
+                                                    <input type="hidden" name="p_id"
+                                                        value="{{ $property->id }}">
                                                     <button type="submit"
                                                         class="btn btn-danger w-100">Remover</button>
                                                 </form>
@@ -424,7 +399,8 @@
                     <div class="modal modal-blur fade" id="modal-scrollable-alter{{ $property->id }}" tabindex="-1"
                         style="display: none;" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                            <form action="{{ route('properties.edit') }}" method="POST" enctype="multipart/form-data"class="modal-content">
+                            <form action="{{ route('properties.edit') }}" method="POST"
+                                enctype="multipart/form-data"class="modal-content">
                                 @csrf
                                 <div class="modal-header">
                                     <h5 class="modal-title">Alterar este imóvel</h5>
@@ -439,12 +415,14 @@
                                         <div class="col">
                                             <label class="form-label">Título <span
                                                     style="color: red;">*</span></label>
-                                            <input type="text" class="form-control" name="p_title" value="{{ $property->p_title }}" required>
+                                            <input type="text" class="form-control" name="p_title"
+                                                value="{{ $property->p_title }}" required>
                                         </div>
                                         <div class="col">
                                             <label class="form-label">Preço <span style="color: red;">*</span></label>
                                             <input type="text" class="form-control" id="property_price"
-                                                onchange="formatValue()" value="{{ $property->p_price }}" name="p_price" required>
+                                                onchange="formatValue()" value="{{ $property->p_price }}"
+                                                name="p_price" required>
                                             <small style="color: red; font-size: 12px;">Digitar apenas números</small>
                                         </div>
                                     </div>
@@ -455,7 +433,8 @@
                                                     style="color: red;">*</span></label>
                                             <select class="form-select" name="p_category">
                                                 <option value="">Selecione uma opção</option>
-                                                <option value="{{ $property->p_category }}" selected>{{ $property->p_category }}</option>
+                                                <option value="{{ $property->p_category }}" selected>
+                                                    {{ $property->p_category }}</option>
 
                                                 @foreach ($categories as $form_category)
                                                     <option value="{{ $form_category->slug }}">
@@ -522,7 +501,9 @@
 
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <img width="150" src="{{ asset('assets/images/properties_img/'.$property->p_cover_img) }}" alt="">
+                                            <img width="150"
+                                                src="{{ asset('assets/images/properties_img/' . $property->p_cover_img) }}"
+                                                alt="">
                                         </div>
                                     </div>
 
@@ -531,8 +512,9 @@
                                             <label class="form-label">Status <span
                                                     style="color: red;">*</span></label>
                                             <select class="form-select" name="p_status">
-                                                <option value="" >Selecione uma opção</option>
-                                                <option value="{{ $property->p_status }}" selected>{{ $property->p_status }}</option>
+                                                <option value="">Selecione uma opção</option>
+                                                <option value="{{ $property->p_status }}" selected>
+                                                    {{ $property->p_status }}</option>
                                                 <option value="Disponível">Disponível</option>
                                                 <option value="Indisponível">Indisponível</option>
                                             </select>
@@ -543,16 +525,48 @@
                                         <div class="col">
                                             <label class="form-label">Url Zillow</label>
                                             <input type="text" class="form-control" multiple name="p_zillow_url"
-                                                placeholder="https://www.zillow.com/homedetails/SEU-IMOVEL" value="{{ $property->p_zillow_url }}">
+                                                placeholder="https://www.zillow.com/homedetails/SEU-IMOVEL"
+                                                value="{{ $property->p_zillow_url }}">
                                         </div>
                                     </div>
 
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn me-auto"
+                                        data-bs-dismiss="modal">Fechar</button>
                                     <input type="hidden" name="id" value="{{ $property->id }}">
                                     <button type="submit" class="btn btn-primary">Salvar Altereções</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal modal-blur fade" id="modal-simple{{ $property->id }}" tabindex="-1"
+                        style="display: none;" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <form action="{{ route('properties.addGallery') }}" method="POST" enctype="multipart/form-data" class="modal-content">
+                                @csrf
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Adicione imagens a este imóvel</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <div class="form-label">Selecione as imagens que deseja adicionar</div>
+                                        <input type="file" class="form-control" accept="image/*"
+                                            id="gallery-photo-add" name="p_images[]" multiple>
+                                        <span style="color: red; font-size: 12px;">Tamanho máximo: 2MB</span>
+                                    </div>
+
+                                    <div class="gallery"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn me-auto"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <input type="hidden" name="p_id" value="{{ $property->id }}">
+                                    <button type="submit" class="btn btn-primary">Salvar Imagens</button>
                                 </div>
                             </form>
                         </div>
