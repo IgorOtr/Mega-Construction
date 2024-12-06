@@ -168,5 +168,7 @@ class PropertyController extends Controller
                 sleep(1);
             }
         }
+
+        return redirect()->route('properties')->with('success', 'Imagens adicionadas com sucesso!');
     }
 }

@@ -7,7 +7,7 @@
             </button>
             <div class="col-md-3 text-center">
                 <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-                    <a href=".">
+                    <a href="{{ route('admin.dashboard') }}">
                         <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.png') }}"
                             alt="">
                     </a>

@@ -43,7 +43,7 @@
                                             <td>
                                                 <a data-bs-toggle="modal"
                                                     data-bs-target="#modal-danger{{ $category->id }}"
-                                                    class="btn btn-danger">
+                                                    class="btn btn-danger btn-action-categories">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                         height="24" viewBox="0 0 24 24" fill="none"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -59,7 +59,7 @@
                                                 </a>
                                                 <a data-bs-toggle="modal"
                                                     data-bs-target="#modal-simple{{ $category->id }}"
-                                                    class="btn btn-warning">
+                                                    class="btn btn-warning btn-action-categories">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                         height="24" viewBox="0 0 24 24" fill="none"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -173,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 form-add-category">
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Nova Categoria</h3>

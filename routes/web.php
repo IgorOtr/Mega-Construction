@@ -1,19 +1,17 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\UserSideController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
 
 Route::group(['prefix' => 'Admin'], function() {
 
-    Route::get('/', function () {
-        return view('admin.index');
-    })->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('/', [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.dashboard');
 
     Route::get('/properties', [PropertyController::class, 'index'])->middleware(['auth', 'verified'])->name('properties');
     Route::post('/add-property', [PropertyController::class,'store'])->middleware(['auth', 'verified'])->name('properties.store');

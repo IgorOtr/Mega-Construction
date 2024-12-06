@@ -53,3 +53,41 @@ footer p, a {
     left: 37.5%; 
     top: 70px;
 }
+
+@media screen and (max-width: 768px) {
+    .btn-action-categories {
+        padding: 5px;
+    }
+    .form-add-category {
+        margin-top: 30px;
+    }
+
+    .btn-action-properties {
+        padding: 5px 12px;
+    }
+
+    .form-label {
+        font-size: 0.8rem;
+    }
+
+    .container-start-properties {
+        padding: 2rem !important;
+    }
+
+    .navbar .navbar-toggler {
+        color: #ffffff;
+    }
+
+    .navbar-toggler {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+    }
+
+    .navbar-expand-md .navbar-collapse .navbar-nav .nav-link {
+        justify-content: center;
+    }
+
+}

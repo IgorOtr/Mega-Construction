@@ -231,14 +231,12 @@
 
 
 
-    <div class="container pt-5 pb-5">
+    <div class="container pt-5 pb-5 container-start-properties">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-6">
                 <h1>Imóveis</h1>
             </div>
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-3 text-end">
+            <div class="col-6 text-end">
                 <button data-toggle="tooltip" data-bs-title="Adicionar um Imóvel" type="button"
                     class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -269,7 +267,7 @@
 
                                     {{-- DELETAR IMÓVEL --}}
                                     <button type="button" data-toggle="tooltip" data-bs-title="Apagar Imóvel"
-                                        class="btn btn-danger text-center" data-bs-toggle="modal"
+                                        class="btn btn-danger text-center btn-action-properties" data-bs-toggle="modal"
                                         data-bs-target="#modal-danger{{ $property->id }}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -287,7 +285,7 @@
 
                                     {{-- ALTERAR IMÓVEL --}}
                                     <button type="" data-toggle="tooltip" data-bs-title="Alterar Imóvel"
-                                        class="btn btn-warning text-center" data-bs-toggle="modal"
+                                        class="btn btn-warning text-center btn-action-properties" data-bs-toggle="modal"
                                         data-bs-target="#modal-scrollable-alter{{ $property->id }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -303,7 +301,7 @@
 
                                     {{-- ADICIONAR FOTOS --}}
                                     <button type="button" data-toggle="tooltip" data-bs-title="Adicionar Imagens"
-                                        class="btn btn-primary text-center" data-bs-toggle="modal"
+                                        class="btn btn-primary text-center btn-action-properties" data-bs-toggle="modal"
                                         data-bs-target="#modal-simple{{ $property->id }}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -323,7 +321,7 @@
 
                                     {{-- VER DETALHES --}}
                                     <a href="#" data-toggle="tooltip" data-bs-title="Ver detalhes"
-                                        class="btn btn-secondary text-center">
+                                        class="btn btn-secondary text-center btn-action-properties">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
