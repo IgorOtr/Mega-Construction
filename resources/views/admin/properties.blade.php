@@ -49,7 +49,7 @@
                         <div class="col">
                             <label class="form-label">Endereço <span style="color: red;">*</span></label>
                             <textarea class="form-control" data-bs-toggle="autosize" name="p_address"
-                                style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 60px;"></textarea>
+                                style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 60px;" required></textarea>
                         </div>
                     </div>
 
@@ -267,8 +267,8 @@
 
                                     {{-- DELETAR IMÓVEL --}}
                                     <button type="button" data-toggle="tooltip" data-bs-title="Apagar Imóvel"
-                                        class="btn btn-danger text-center btn-action-properties" data-bs-toggle="modal"
-                                        data-bs-target="#modal-danger{{ $property->id }}">
+                                        class="btn btn-danger text-center btn-action-properties"
+                                        data-bs-toggle="modal" data-bs-target="#modal-danger{{ $property->id }}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -285,7 +285,8 @@
 
                                     {{-- ALTERAR IMÓVEL --}}
                                     <button type="" data-toggle="tooltip" data-bs-title="Alterar Imóvel"
-                                        class="btn btn-warning text-center btn-action-properties" data-bs-toggle="modal"
+                                        class="btn btn-warning text-center btn-action-properties"
+                                        data-bs-toggle="modal"
                                         data-bs-target="#modal-scrollable-alter{{ $property->id }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -301,8 +302,8 @@
 
                                     {{-- ADICIONAR FOTOS --}}
                                     <button type="button" data-toggle="tooltip" data-bs-title="Adicionar Imagens"
-                                        class="btn btn-primary text-center btn-action-properties" data-bs-toggle="modal"
-                                        data-bs-target="#modal-simple{{ $property->id }}">
+                                        class="btn btn-primary text-center btn-action-properties"
+                                        data-bs-toggle="modal" data-bs-target="#modal-simple{{ $property->id }}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -332,6 +333,7 @@
                                                 d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
                                         </svg>
                                     </a>
+
                                 </div>
                             </div>
 
@@ -345,232 +347,299 @@
                                     ">
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            <div class="card-footer p-0">
+                                <div class="accordion" style="border-radius: 0px 0px 10px 10px;"
+                                    id="accordion-example">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading-1">
+                                            <button class="accordion-button collapsed" style="padding: 10px 10px;"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1"
+                                                aria-expanded="false">
+                                                Galeria de imagens
+                                            </button>
+                                        </h2>
+                                        <div id="collapse-1" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordion-example" style="">
+                                            <div class="accordion-body pt-0">
 
-                    {{-- MODAIS --}}
+                                                <div class="row">
+                                                    @if (count($property->gallery) != 0)
+                                                        
+                                                    @foreach ($property->gallery as $gallery)
+                                                        <div class="col-3">
+                                                            <form action="{{ route('properties.deleteGallery') }}" method="POST">
+                                                                @csrf
+                                                                <input type="hidden" name="id" value="{{ $gallery->id }}">
+                                                                <button type="submit" class="btn btn-danger btn-drop-images-gallery">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24"
+                                                                        viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash m-0">
+                                                                        <path stroke="none" d="M0 0h24v24H0z"
+                                                                            fill="none" />
+                                                                        <path d="M4 7l16 0" />
+                                                                        <path d="M10 11l0 6" />
+                                                                        <path d="M14 11l0 6" />
+                                                                        <path
+                                                                            d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                                        <path
+                                                                            d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                                    </svg>
+                                                                </button>
+                                                            </form>
+                                                            <img width="120" height="120"
+                                                                src="{{ asset('assets/images/properties_img/' . $gallery->img_name) }}"
+                                                                alt="">
 
-                    <div class="modal modal-blur fade" id="modal-danger{{ $property->id }}" tabindex="-1"
-                        style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                <div class="modal-status bg-danger"></div>
-                                <div class="modal-body text-center py-4">
-                                    <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"
-                                        class="icon mb-2 text-danger icon-lg">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M12 9v4"></path>
-                                        <path
-                                            d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z">
-                                        </path>
-                                        <path d="M12 16h.01"></path>
-                                    </svg>
-                                    <h3>Tem certeza que deseja remover este imóvel?</h3>
-                                    <div class="text-secondary"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <div class="w-100">
-                                        <div class="row">
-                                            <div class="col"><a href="#" class="btn w-100"
-                                                    data-bs-dismiss="modal">Cancelar</a></div>
-                                            <div class="col">
-                                                <form action="{{ route('properties.destroy') }}" method="POST">
-                                                    @csrf
-                                                    <input type="hidden" name="p_id"
-                                                        value="{{ $property->id }}">
-                                                    <button type="submit"
-                                                        class="btn btn-danger w-100">Remover</button>
-                                                </form>
+                                                        </div>
+                                                    @endforeach
+
+                                                    @else
+
+                                                        <div class="col-12">
+                                                            <p class="text-center">Nenhuma imagem foi adicionada.</p>
+                                                        </div>
+                                                        
+                                                    @endif
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="modal modal-blur fade" id="modal-scrollable-alter{{ $property->id }}" tabindex="-1"
-                        style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                            <form action="{{ route('properties.edit') }}" method="POST"
-                                enctype="multipart/form-data"class="modal-content">
-                                @csrf
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Alterar este imóvel</h5>
+                        {{-- MODAIS --}}
+
+                        <div class="modal modal-blur fade" id="modal-danger{{ $property->id }}" tabindex="-1"
+                            style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                                <div class="modal-content">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
+                                    <div class="modal-status bg-danger"></div>
+                                    <div class="modal-body text-center py-4">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon mb-2 text-danger icon-lg">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 9v4"></path>
+                                            <path
+                                                d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z">
+                                            </path>
+                                            <path d="M12 16h.01"></path>
+                                        </svg>
+                                        <h3>Tem certeza que deseja remover este imóvel?</h3>
+                                        <div class="text-secondary"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="w-100">
+                                            <div class="row">
+                                                <div class="col"><a href="#" class="btn w-100"
+                                                        data-bs-dismiss="modal">Cancelar</a></div>
+                                                <div class="col">
+                                                    <form action="{{ route('properties.destroy') }}" method="POST">
+                                                        @csrf
+                                                        <input type="hidden" name="p_id"
+                                                            value="{{ $property->id }}">
+                                                        <button type="submit"
+                                                            class="btn btn-danger w-100">Remover</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-
-
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Título <span
-                                                    style="color: red;">*</span></label>
-                                            <input type="text" class="form-control" name="p_title"
-                                                value="{{ $property->p_title }}" required>
-                                        </div>
-                                        <div class="col">
-                                            <label class="form-label">Preço <span style="color: red;">*</span></label>
-                                            <input type="text" class="form-control" id="property_price"
-                                                onchange="formatValue()" value="{{ $property->p_price }}"
-                                                name="p_price" required>
-                                            <small style="color: red; font-size: 12px;">Digitar apenas números</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Categoria <span
-                                                    style="color: red;">*</span></label>
-                                            <select class="form-select" name="p_category">
-                                                <option value="">Selecione uma opção</option>
-                                                <option value="{{ $property->p_category }}" selected>
-                                                    {{ $property->p_category }}</option>
-
-                                                @foreach ($categories as $form_category)
-                                                    <option value="{{ $form_category->slug }}">
-                                                        {{ $form_category->category_name }}
-                                                    </option>
-                                                @endforeach
-
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Endereço <span
-                                                    style="color: red;">*</span></label>
-                                            <textarea class="form-control" data-bs-toggle="autosize" name="p_address"
-                                                style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 60px;">{{ $property->p_address }}</textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Quartos <span
-                                                    style="color: red;">*</span></label>
-                                            <input type="number" class="form-control" name="p_bedroom" required
-                                                value="{{ $property->p_bedroom }}">
-                                        </div>
-                                        <div class="col">
-                                            <label class="form-label">Banheiros <span
-                                                    style="color: red;">*</span></label>
-                                            <input type="number" class="form-control" name="p_bathroom" required
-                                                value="{{ $property->p_bathroom }}">
-                                        </div>
-                                        <div class="col">
-                                            <label class="form-label">Vagas <span style="color: red;">*</span></label>
-                                            <input type="number" class="form-control" name="p_parking" required
-                                                value="{{ $property->p_parking }}">
-                                        </div>
-                                        <div class="col">
-                                            <label class="form-label">Área (sqft) <span
-                                                    style="color: red;">*</span></label>
-                                            <input type="number" class="form-control" name="p_area" required
-                                                value="{{ $property->p_area }}">
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Descrição <span
-                                                    style="color: red;">*</span></label>
-                                            <textarea class="form-control" data-bs-toggle="autosize" name="p_description"
-                                                style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 150px;">{{ $property->p_description }}</textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Imagem de capa</label>
-                                            <input type="file" class="form-control" multiple name="p_cover_img"
-                                                accept="image/*">
-                                            <small style="color: red; font-size: 12px;">Tamanho máximo: 1MB</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <img width="150"
-                                                src="{{ asset('assets/images/properties_img/' . $property->p_cover_img) }}"
-                                                alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Status <span
-                                                    style="color: red;">*</span></label>
-                                            <select class="form-select" name="p_status">
-                                                <option value="">Selecione uma opção</option>
-                                                <option value="{{ $property->p_status }}" selected>
-                                                    {{ $property->p_status }}</option>
-                                                <option value="Disponível">Disponível</option>
-                                                <option value="Indisponível">Indisponível</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <label class="form-label">Url Zillow</label>
-                                            <input type="text" class="form-control" multiple name="p_zillow_url"
-                                                placeholder="https://www.zillow.com/homedetails/SEU-IMOVEL"
-                                                value="{{ $property->p_zillow_url }}">
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn me-auto"
-                                        data-bs-dismiss="modal">Fechar</button>
-                                    <input type="hidden" name="id" value="{{ $property->id }}">
-                                    <button type="submit" class="btn btn-primary">Salvar Altereções</button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="modal modal-blur fade" id="modal-simple{{ $property->id }}" tabindex="-1"
-                        style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <form action="{{ route('properties.addGallery') }}" method="POST" enctype="multipart/form-data" class="modal-content">
-                                @csrf
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Adicione imagens a este imóvel</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <div class="form-label">Selecione as imagens que deseja adicionar</div>
-                                        <input type="file" class="form-control" accept="image/*"
-                                            id="gallery-photo-add" name="p_images[]" multiple>
-                                        <span style="color: red; font-size: 12px;">Tamanho máximo: 2MB</span>
+                        <div class="modal modal-blur fade" id="modal-scrollable-alter{{ $property->id }}"
+                            tabindex="-1" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                <form action="{{ route('properties.edit') }}" method="POST"
+                                    enctype="multipart/form-data"class="modal-content">
+                                    @csrf
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Alterar este imóvel</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
+                                    <div class="modal-body">
 
-                                    <div class="gallery"></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn me-auto"
-                                        data-bs-dismiss="modal">Cancelar</button>
-                                    <input type="hidden" name="p_id" value="{{ $property->id }}">
-                                    <button type="submit" class="btn btn-primary">Salvar Imagens</button>
-                                </div>
-                            </form>
+
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Título <span
+                                                        style="color: red;">*</span></label>
+                                                <input type="text" class="form-control" name="p_title"
+                                                    value="{{ $property->p_title }}" required>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Preço <span
+                                                        style="color: red;">*</span></label>
+                                                <input type="text" class="form-control" id="property_price"
+                                                    onchange="formatValue()" value="{{ $property->p_price }}"
+                                                    name="p_price" required>
+                                                <small style="color: red; font-size: 12px;">Digitar apenas
+                                                    números</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Categoria <span
+                                                        style="color: red;">*</span></label>
+                                                <select class="form-select" name="p_category">
+                                                    <option value="">Selecione uma opção</option>
+                                                    <option value="{{ $property->p_category }}" selected>
+                                                        {{ $property->p_category }}</option>
+
+                                                    @foreach ($categories as $form_category)
+                                                        <option value="{{ $form_category->slug }}">
+                                                            {{ $form_category->category_name }}
+                                                        </option>
+                                                    @endforeach
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Endereço <span
+                                                        style="color: red;">*</span></label>
+                                                <textarea class="form-control" data-bs-toggle="autosize" name="p_address"
+                                                    style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 60px;">{{ $property->p_address }}</textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Quartos <span
+                                                        style="color: red;">*</span></label>
+                                                <input type="number" class="form-control" name="p_bedroom" required
+                                                    value="{{ $property->p_bedroom }}">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Banheiros <span
+                                                        style="color: red;">*</span></label>
+                                                <input type="number" class="form-control" name="p_bathroom" required
+                                                    value="{{ $property->p_bathroom }}">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Vagas <span
+                                                        style="color: red;">*</span></label>
+                                                <input type="number" class="form-control" name="p_parking" required
+                                                    value="{{ $property->p_parking }}">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">Área (sqft) <span
+                                                        style="color: red;">*</span></label>
+                                                <input type="number" class="form-control" name="p_area" required
+                                                    value="{{ $property->p_area }}">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Descrição <span
+                                                        style="color: red;">*</span></label>
+                                                <textarea class="form-control" data-bs-toggle="autosize" name="p_description"
+                                                    style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 150px;">{{ $property->p_description }}</textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Imagem de capa</label>
+                                                <input type="file" class="form-control" multiple
+                                                    name="p_cover_img" accept="image/*">
+                                                <small style="color: red; font-size: 12px;">Tamanho máximo: 1MB</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <img width="150"
+                                                    src="{{ asset('assets/images/properties_img/' . $property->p_cover_img) }}"
+                                                    alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Status <span
+                                                        style="color: red;">*</span></label>
+                                                <select class="form-select" name="p_status">
+                                                    <option value="">Selecione uma opção</option>
+                                                    <option value="{{ $property->p_status }}" selected>
+                                                        {{ $property->p_status }}</option>
+                                                    <option value="Disponível">Disponível</option>
+                                                    <option value="Indisponível">Indisponível</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Url Zillow</label>
+                                                <input type="text" class="form-control" multiple
+                                                    name="p_zillow_url"
+                                                    placeholder="https://www.zillow.com/homedetails/SEU-IMOVEL"
+                                                    value="{{ $property->p_zillow_url }}">
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn me-auto"
+                                            data-bs-dismiss="modal">Fechar</button>
+                                        <input type="hidden" name="id" value="{{ $property->id }}">
+                                        <button type="submit" class="btn btn-primary">Salvar Altereções</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
 
-                    {{-- FIM MODAIS --}}
+                        <div class="modal modal-blur fade" id="modal-simple{{ $property->id }}" tabindex="-1"
+                            style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <form action="{{ route('properties.addGallery') }}" method="POST"
+                                    enctype="multipart/form-data" class="modal-content">
+                                    @csrf
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Adicione imagens a este imóvel</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <div class="form-label">Selecione as imagens que deseja adicionar</div>
+                                            <input type="file" class="form-control" accept="image/*"
+                                                id="gallery-photo-add" name="p_images[]" multiple>
+                                            <span style="color: red; font-size: 12px;">Tamanho máximo: 2MB</span>
+                                        </div>
+
+                                        <div class="gallery"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn me-auto"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                        <input type="hidden" name="p_id" value="{{ $property->id }}">
+                                        <button type="submit" class="btn btn-primary">Salvar Imagens</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        {{-- FIM MODAIS --}}
                 @endforeach
             @else
                 <div class="col-md-12 text-center">

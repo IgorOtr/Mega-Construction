@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Property;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;    
 use Illuminate\Http\Request;
 use App\Models\PropertyGallery;
 
@@ -17,7 +18,15 @@ class PropertyController extends Controller
     {
         $categories = Category::all();
         $properties = Property::all()->sortByDesc('id');
+
+        $properties->each(function ($property) {
+            $property->gallery = PropertyGallery::where('property_id', $property->id)->get();
+            
+        });
+
         return view('admin.properties', compact('properties', 'categories'));
+        // return view('admin.properties', compact('properties', 'categories'));
+
     }
 
     public function toAscii($str, $replace = array(), $delimiter = '-')
@@ -103,7 +112,8 @@ class PropertyController extends Controller
             $img = $request->file('p_cover_img');
             $img_name = md5(time()) . '.' . $img->getClientOriginalExtension();
 
-            unlink(public_path('assets/images/properties_img/' . $properties->p_cover_img));
+            $destinationPath = asset('assets/images/properties_img/');
+            File::delete($destinationPath.'/'.$property->p_cover_img);
 
             $img->move('assets/images/properties_img', $img_name);
 
@@ -131,8 +141,9 @@ class PropertyController extends Controller
         if (!$property) {
             return abort(404);
         }
-
-        unlink(public_path('assets/images/properties_img/' . $property->p_cover_img));
+        
+        $destinationPath = asset('assets/images/properties_img/');
+        File::delete($destinationPath.'/'.$property->p_cover_img);
 
         $property->delete();
 
@@ -170,5 +181,20 @@ class PropertyController extends Controller
         }
 
         return redirect()->route('properties')->with('success', 'Imagens adicionadas com sucesso!');
+    }
+
+    public function deleteGallery(Request $request) 
+    {
+        $image = PropertyGallery::find($request->id);
+
+        if ($image) {
+            $destinationPath = asset('assets/images/properties_img/');
+            File::delete($destinationPath.'/'.$image->img_name);
+            $image->delete();
+        }
+
+        sleep(1);
+
+        return redirect()->route('properties')->with('success', 'Imagem excluída com sucesso!');
     }
 }

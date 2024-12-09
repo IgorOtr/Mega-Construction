@@ -18,6 +18,7 @@ Route::group(['prefix' => 'Admin'], function() {
     Route::post('/delete-property', [PropertyController::class, 'destroy'])->middleware(['auth', 'verified'])->name('properties.destroy');
     Route::post('/edit-property', [PropertyController::class, 'update'])->middleware(['auth', 'verified'])->name('properties.edit');
     Route::post('/addGallery', [PropertyController::class, 'addGallery'])->middleware(['auth', 'verified'])->name('properties.addGallery');
+    Route::post('/deleteGallery', [PropertyController::class, 'deleteGallery'])->middleware(['auth', 'verified'])->name('properties.deleteGallery');
 
     Route::get('/categories', [CategoryController::class, 'index'])->middleware(['auth', 'verified'])->name('categories');
     Route::post('/add-category', [CategoryController::class,'store'])->middleware(['auth', 'verified'])->name('categories.store');

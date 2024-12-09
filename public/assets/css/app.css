@@ -36,6 +36,8 @@
 footer {
     position: fixed;
     background-color: #141414;
+    left: 0px;
+    right: 0px;
     bottom: 0px;
     padding: 12px;
     width: 100%;
@@ -52,6 +54,12 @@ footer p, a {
     position: absolute;
     left: 37.5%; 
     top: 70px;
+}
+
+.btn-drop-images-gallery {
+    position: absolute;
+    padding: 4px;
+    border-radius: 0px 0px 3px 0px;
 }
 
 @media screen and (max-width: 768px) {
