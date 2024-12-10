@@ -7,7 +7,7 @@ use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserSideController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
+Route::get('/coming-soon', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
 
 Route::group(['prefix' => 'Admin'], function() {
 
