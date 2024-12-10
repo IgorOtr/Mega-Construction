@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserSideController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/coming-soon', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
+Route::post('/coming-soon', [MailController::class, 'sendContactEmail'])->name('send-email-from-coming-soon');
 
 Route::group(['prefix' => 'Admin'], function() {
 

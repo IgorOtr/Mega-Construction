@@ -24,7 +24,8 @@
                 <div class="card rounded-3" style="background-color: black; border: none; color: #ffffff; box-shadow: 10px 10px 0px #ff3c00;">
                     <div class="card-body">
                         <h2 class="text-center mb-3">GET IN TOUCH</h2>
-                        <form action="./" method="get" autocomplete="off" novalidate="">
+                        <form action="{{ route('send-email-from-coming-soon') }}" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <label class="form-label">Name</label>
                                 <input style="color: black;" type="text" class="form-control" autocomplete="off">
