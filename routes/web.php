@@ -10,6 +10,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/coming-soon', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
 Route::post('/coming-soon', [MailController::class, 'sendContactEmail'])->name('send-email-from-coming-soon');
+Route::get('/', [UserSideController::class, 'renderHomePage'])->name('home');
+Route::get('/about-us', [UserSideController::class, 'renderAboutUsPage'])->name('about-us');
+Route::get('/development', [UserSideController::class, 'renderDevelopmentPage'])->name('development');
+Route::get('/constructions', [UserSideController::class, 'renderConstructionsPage'])->name('constructions');
+Route::get('/investment', [UserSideController::class, 'renderInvestmentPage'])->name('investment');
+Route::get('/our-properties', [UserSideController::class,'renderPropertiesPage'])->name('our-properties');
+Route::get('/careers', [UserSideController::class,'renderCareersPage'])->name('careers');
+Route::get('/contact-us', [UserSideController::class, 'renderContactUsPage'])->name('contact-us');
+
 
 Route::group(['prefix' => 'Admin'], function() {
 

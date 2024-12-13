@@ -10,4 +10,44 @@ class UserSideController extends Controller
     {
         return view('coming-soon');
     }
+
+    public function renderHomePage()
+    {
+        return view('home');
+    }
+
+    public function renderAboutUsPage()
+    {
+
+    }
+
+    public function renderDevelopmentPage()
+    {
+
+    }
+
+    public function renderConstructionsPage()
+    {
+
+    }
+
+    public function renderInvestmentPage()
+    {
+
+    }
+
+    public function renderPropertiesPage()
+    {
+
+    }
+
+    public function renderCareersPage()
+    {
+
+    }
+
+    public function renderContactUsPage()
+    {
+        return view('contact-us');
+    }
 }

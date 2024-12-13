@@ -12,7 +12,7 @@
             <div class="col-md-6 text-center d-flex align-items-center flex-column justify-content-center">
                 <h1
                 class="mb-3"
-                    style="font-size: 100px; font-weight: 800; line-height: 100px; color: #FF3A00; text-transform: uppercase; text-shadow: 5px 5px 5px #000000;">
+                    style="font-size: 100px; font-weight: 800; line-height: 100px; color: #fb5000; text-transform: uppercase; text-shadow: 5px 5px 5px #000000;">
                     Coming<br>Soon</h1>
                 <p style="text-align: justify; color: #000000; font-size: 18px; font-weight: 800; width: 80%;">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -28,27 +28,27 @@
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Name</label>
-                                <input style="color: black;" type="text" class="form-control" autocomplete="off">
+                                <input style="color: black;" type="text" class="form-control" name="name" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Email</label>
-                                <input style="color: black;" type="email" class="form-control">
+                                <input style="color: black;" type="email" class="form-control" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Phone</label>
-                                <input style="color: black;" type="text" class="form-control">
+                                <input style="color: black;" type="text" class="form-control" name="phone" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">City</label>
-                                <input style="color: black;" type="text" class="form-control">
+                                <input style="color: black;" type="text" class="form-control" name="city" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">State</label>
-                                <input style="color: black;" type="text" class="form-control">
+                                <input style="color: black;" type="text" class="form-control" name="state" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Message</label>
-                                <textarea style="color: black;" rows="5" class="form-control"></textarea>
+                                <textarea style="color: black;" rows="5" class="form-control" name="message" required></textarea>
                             </div>
                             <div class="form-footer">
                                 <button type="submit" class="btn btn-warning w-100 mb-3">Send Message</button>
@@ -62,6 +62,7 @@
     </div>
 
 
+    @include('includes.footer')
 </body>
+</html>
 
-@include('includes.footer')
