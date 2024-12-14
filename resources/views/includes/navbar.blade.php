@@ -13,28 +13,28 @@
                 <div class="navbar-nav ms-auto">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Home Page" href="">Home</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'home')  ? 'nav-active' : '' }}" aria-label="Go To Home Page" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To About Us Page" href="">About Us</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'about-us')  ? 'nav-active' : '' }}" aria-label="Go To About Us Page" href="{{ route('about-us') }}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Development Page" href="">Development</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'development')  ? 'nav-active' : '' }}" aria-label="Go To Development Page" href="{{ route('development') }}">Development</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Constructions Page" href="">Constructions</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'constructions')  ? 'nav-active' : '' }}" aria-label="Go To Constructions Page" href="{{ route('constructions') }}">Constructions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Investment Page" href="">Investment</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'investment')  ? 'nav-active' : '' }}" aria-label="Go To Investment Page" href="{{ route('investment') }}">Investment</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Our Properties Page" href="">Our Properties</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'our-properties')  ? 'nav-active' : '' }}" aria-label="Go To Our Properties Page" href="">Our Properties</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Careers Page" href="">Careers</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'careers')  ? 'nav-active' : '' }}" aria-label="Go To Careers Page" href="{{ route('careers') }}">Careers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-label="Go To Contact Page" href="{{ route('contact-us') }}">Contact</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'contact-us')  ? 'nav-active' : '' }}" aria-label="Go To Contact Page" href="{{ route('contact-us') }}">Contact</a>
                         </li>
                     </ul>
                 </div>

@@ -18,22 +18,22 @@ class UserSideController extends Controller
 
     public function renderAboutUsPage()
     {
-
+        return view('about-us');
     }
 
     public function renderDevelopmentPage()
     {
-
+        return view('development');
     }
 
     public function renderConstructionsPage()
     {
-
+        return view('constructions');
     }
 
     public function renderInvestmentPage()
     {
-
+        return view('investment');
     }
 
     public function renderPropertiesPage()
@@ -43,7 +43,7 @@ class UserSideController extends Controller
 
     public function renderCareersPage()
     {
-
+        return view('careers');
     }
 
     public function renderContactUsPage()

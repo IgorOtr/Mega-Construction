@@ -3,7 +3,7 @@
         <div class="row">
 
             <div class="col-md-4 text-center logo-and-social-column">
-                <a href=""><img src="{{ asset('assets/images/Logo Mega_Contractor-02.png') }}" alt=""></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo Mega_Contractor-02.png') }}" alt=""></a>
                 <ul class="d-flex">
                     <li>
                         <a href="">
@@ -62,12 +62,12 @@
                     QUICK LINKS
                 </h4>
                 <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Development</a></li>
-                    <li><a href="">Construction</a></li>
-                    <li><a href="">Investment</a></li>
+                    <li><a href="{{ route('about-us') }}">About Us</a></li>
+                    <li><a href="{{ route('development') }}">Development</a></li>
+                    <li><a href="{{ route('constructions') }}">Construction</a></li>
+                    <li><a href="{{ route('investment') }}">Investment</a></li>
                     <li><a href="">Our Properties</a></li>
-                    <li><a href="">Careers</a></li>
+                    <li><a href="{{ route('careers') }}">Careers</a></li>
                     <li><a href="">Estimate</a></li>
                     <li><a href="">Newsletter</a></li>
                     <li><a href="{{ route('contact-us') }}">Contact</a></li>
