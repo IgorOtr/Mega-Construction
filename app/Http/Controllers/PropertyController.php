@@ -197,4 +197,9 @@ class PropertyController extends Controller
 
         return redirect()->route('properties')->with('success', 'Imagem excluída com sucesso!');
     }
+
+    public function getPropertyDetails()
+    {
+        return view('property-details');
+    }
 }

@@ -20,7 +20,7 @@
                             entire condos, Mega Contractors has been shaping communities and leaving its mark across the
                             country.
                         </p>
-                        <a href="" class="btn-our-story">CONTACT US</a>
+                        <a href="{{ route('contact-us') }}" class="btn-our-story">CONTACT US</a>
                     </div>
                 </div>
                 <div class="col-md-6"></div>
@@ -189,10 +189,10 @@
 
                             <div class="client-name-stars">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <h3>Michael J.</h3>
                                     </div>
-                                    <div class="col-md-6 d-flex align-items-center">
+                                    <div class="col-6 d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="currentColor"
                                             class="icon icon-tabler icons-tabler-filled icon-tabler-star">
@@ -237,8 +237,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 clients-feedback-column"
-                            style="border-left: 1px solid #efefef;border-right: 1px solid #efefef;">
+                        <div class="col-md-4 clients-feedback-column clients-feedback-column-border"
+                            style="">
                             <img src="{{ asset('assets/images/aspas.png') }}" alt="">
                             <p>
                                 Mega worked on my construction project with such attention to detail and expertise that
@@ -248,10 +248,10 @@
 
                             <div class="client-name-stars">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <h3>James A.</h3>
                                     </div>
-                                    <div class="col-md-6 d-flex align-items-center">
+                                    <div class="col-6 d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="currentColor"
                                             class="icon icon-tabler icons-tabler-filled icon-tabler-star">
@@ -306,10 +306,10 @@
 
                             <div class="client-name-stars">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <h3>Melissa C.</h3>
                                     </div>
-                                    <div class="col-md-6 d-flex align-items-center">
+                                    <div class="col-6 d-flex align-items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="currentColor"
                                             class="icon icon-tabler icons-tabler-filled icon-tabler-star">
@@ -449,11 +449,6 @@
                 </div>
                 <div class="col-md-12 text-center">
                     <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
                         <div class="col-md-2"></div>
                     </div>
                 </div>

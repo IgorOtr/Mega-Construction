@@ -62,10 +62,7 @@ a {
 }
 
 .alert {
-    width: 400px;
-    position: absolute;
-    left: 37.5%;
-    top: 70px;
+   margin: 0px;
 }
 
 .btn-drop-images-gallery {
@@ -142,10 +139,12 @@ a {
 
 .about-us-section {
     margin-top: -50px;
+    position: relative;
 }
+
 .img-about-us-section {
     position: absolute;
-    top: 916px;
+    top: 119px;
     right: 170px;
 }
 
@@ -185,6 +184,7 @@ a {
 }
 
 .topics-section {
+    position: relative;
     background-color: #141414;
     height: 900px;
     display: flex;
@@ -282,9 +282,9 @@ a {
 }
 
 .photo-gallery-section {
-    background-image: url(../images/analog-landscape-city-with-buildings.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 900px;
 }
 
@@ -1205,7 +1205,337 @@ form,
     line-height: 105px;
 }
 
+.clients-feedback-column-border {
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+}
+
+.our-properties-banner {
+    background-image: url(../images/f5e9d2f1be532c54d7a4f50587203180.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -470px;
+    height: 550px;
+    position: relative;
+    border-bottom: 15px solid #fb5000;
+}
+
+.search-text-column h1 {
+    color: #fb5000;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66.6px;
+    text-align: left;
+}
+
+.search-text-column h3 {
+    color: #141414;
+    font-size: 43px;
+    font-weight: 500;
+    line-height: 64.5px;
+    text-align: left;
+}
+
+.form-search-column .form-control    {
+    border: 1px solid #fb5000;
+}
+
+.form-search-column .form-label    {
+    color: #141414;
+    font-size: 12.32px;
+    font-weight: 700;
+    line-height: 18.48px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.form-search-column .btn-serach    {
+    background-color: #fb5000;
+    color: #141414;
+    height: 70%;
+    width: 100%;
+    border: none;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 8px;
+}
+
+.search-map-column {
+    border-top: 18px solid #fb5000;
+}
+
+.search-map-column {
+    padding: 0px;
+}
+
+.search-map-column img {
+    width: 100%;
+}
+
+.property-main-delatils-column h1{
+    color: #141414;
+    font-size: 38.3px;
+    font-weight: 700;
+    text-align: left;
+
+}
+
+.property-main-delatils-column p {
+    color: #141414;
+    font-size: 17.7px;
+    font-weight: 300;
+    line-height: 26.55px;
+    text-align: left;   
+}
+
+.property-main-delatils-column .property-address {
+    color: #141414;
+    font-family: Poppins;
+    font-size: 14.36px;
+    font-weight: 300;
+    line-height: 21.55px;
+    text-align: center;
+}
+
+.property-main-delatils-column .property-price {
+    color: #141414;
+    font-family: Poppins;
+    font-size: 42.49px;
+    font-weight: 700;
+    line-height: 63.73px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.btn-request-a-tour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fb5000;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.5px;
+    letter-spacing: 0.27em;
+    text-align: center;
+    width: 100%;
+    height: 52px;
+}
+
+.btn-contact-agent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #fb5000;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.5px;
+    letter-spacing: 0.27em;
+    text-align: center;
+    width: 100%;
+    height: 52px;
+    border: 2px solid #fb5000;
+}
+
+.property-images img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    object-position: 10px -410px;
+}
+
+.property-info-column h1 {
+    color: #141414;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    text-align: left;
+}
+
+.property-info-column span {
+    color: #141414;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+}
+
+.property-info-column p {
+    color: #141414;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    width: 530px;
+}
+
+.btn-videos, .btn-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    background-color: #141414;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    gap: 10px;
+}
+
+.btn-blueprint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    background-color: #ffffff;
+    color: #141414;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid #141414;
+    gap: 10px;
+}
+
+.property-diff-row {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #efefef;
+}
+
+.property-diff-column h2 {
+    color: #141414;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17.76px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.property-diff-column span {
+    color: #141414;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.virtual-tour-row h1 {
+    color: #141414;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 44.07px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.btn-virtual-tour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fb5000;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 28.5px;
+    letter-spacing: 0.27em;
+    text-align: center;
+    width: 100%;
+    height: 62px;
+    text-transform: uppercase;
+}
+
+.property-price-and-info-column h2 {
+    color: #141414;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.property-price-and-info-column p {
+    color: #141414;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.property-info-column {
+    font-size: 12px;
+    font-weight: 300;
+    color: #141414;
+}
+
+.property-info-column .icon {
+    width: 1.3rem;
+}
+
+.property-info-beds-column {
+    padding: 0px 60px;
+}
+
+.property-info-beds-column h2 {
+    color: #141414;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.property-info-beds-column p {
+    color: #141414;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+    font-size: 140px;
+    color: #fb5000;
+    position: absolute;
+    top: 300px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -115px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -115px;
+}
+
+.carousel-get-an-estimate {
+    margin-left: 80px;
+}
+
+.carousel-get-an-estimate-indicators {
+    bottom: -70px;
+    left: -225px;
+}
+
+.carousel-indicators-dot [data-bs-target] {
+    background-color: #ffffff;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #fb5000;
+}
+
 @media screen and (max-width: 768px) {
+
+    #myVideo {
+        height: 70vh;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .col-img-nav {
+        text-align: start !important;
+        padding-left: 20px;
+    }
+
+    .footer-mega {
+        height: 840px;
+    }
+
     .btn-action-categories {
         padding: 5px;
     }
@@ -1226,7 +1556,20 @@ form,
     }
 
     .navbar .navbar-toggler {
-        color: #ffffff;
+        color: #fb5000;
+    }
+
+    .navbar-toggler-icon {
+        margin-top: 50px;
+    }
+
+    .navbar-expand-md .navbar-collapse {
+        background-color: #141414;
+        padding: 20px 0px;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        border-bottom: 2px solid #fb5000;
     }
 
     .navbar-toggler {
@@ -1240,4 +1583,435 @@ form,
     .navbar-expand-md .navbar-collapse .navbar-nav .nav-link {
         justify-content: center;
     }
+    .our-story-vector {
+        top: 600px;
+    }
+
+    .group-and-logo-mega {
+        display: none;
+    }
+
+
+    .our-story-col div {
+        width: 90%;
+    }
+
+    .btn-our-story {
+        font-size: 12px;
+    }
+
+    .our-mission-vision-vector {
+        display: none;
+    }
+
+    .our-story-col div p {
+        text-align: justify;
+    }
+
+    .our-mission-vision-column div p {
+        text-align: justify;
+    }
+
+    .our-values-text div {
+        width: 90%;
+    }
+
+    .our-values-text h1 {
+        font-size: 41px;
+    }
+
+    .our-values-text p {
+        text-align: justify;
+    }
+
+    .our-values-section {
+        height: 2035px;
+    }
+
+    .our-legacy-section {
+        padding-top: 80px;
+        height: 1790px;
+    }
+
+    .our-legacy-column div {
+        width: 90%;
+    }
+
+    .our-legacy-column {
+        align-items: start;
+        margin-bottom: -290px;
+    }
+
+    .clients-feedback-section {
+        padding: 80px 20px; 
+        height: 1700px;
+    }
+
+    .clients-feedback-column {
+        position: relative;
+        padding: 40px 0px;
+    }
+
+    .clients-feedback-column p {
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .clients-feedback-column-border {
+        border: none;
+    }
+
+    .vector-find-home {
+        padding: 150px;
+    }
+
+    .form-find-home {
+        padding-top: 80px;
+    }
+
+    .form-find-home h1 {
+        font-size: 49px;
+        text-align: center;
+    }
+
+    .find-home-section form {
+        width: 90%;
+    }
+
+    .our-partners-section h1 {
+        font-size: 49px;
+        line-height: 55px;
+    }
+
+    .constructions-section img {
+        top: 400px;
+    }
+
+    .constructions-presentation div {
+        width: 340px;
+        position: absolute;
+        top: 410px;
+    }
+
+    .constructions-presentation h1 {
+        font-size: 35px;
+        text-align: right;
+    }
+
+    .constructions-presentation p {
+        font-size: 14px;
+    }
+
+    .constructions-presentation a {
+        padding: 10px 102px;
+        font-size: 14px;
+    }
+
+    .constructions-section {
+        height: 965px;
+    }
+
+    .featured-projects {
+        height: 570px;
+    }
+
+    .featured-projects h1 {
+        font-size: 66px;
+        text-align: center;
+    }
+
+    .fetured-projects-vector {
+        display: none;
+    }
+
+    .featured-projects p {
+        text-align: justify;
+    }
+
+
+    .completed-projects {
+        height: 460px;
+    }
+
+    .get-an-estimate-section {
+        height: 1180px;
+    }
+
+    .get-an-estimate-vector-constructions {
+        display: none;
+    }
+
+    .investment-section {
+        position: relative;
+    }
+
+    .investment-presentation-form div {
+        width: 90%;
+    }
+
+    .investment-presentation-form h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .investment-section img {
+        top: 531px;
+        height: 570px;
+    }
+
+    .help-us-section h1 {
+        font-size: 40px;
+        line-height: 49px;
+    }
+
+    .help-us-section h2 {
+        text-align: center;
+    }
+
+    .help-us-section p {
+        text-align: center;
+    }
+
+    .investment-icons {
+        text-align: center;
+    }
+
+    .form-contact-us-column {
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .careers-section {
+        height: 860px;
+        background-image: none;
+        background-color: #141414 !important;
+    }
+
+    .contact-us-vector {
+        display: none;
+    }
+
+    .careers-section h1, .contact-us-paragraph, .contact-us-sub-paragraph {
+        text-align: center;
+    }
+
+    .contact-us-section {
+        background-image: none;
+        background-color: #141414 !important;
+        height: 1020px;
+    }
+
+    .contact-us-section h1 {
+        font-size: 56px;
+        text-align: center;
+    }
+
+    .our-properties-banner {
+        height: 0px;
+        background: none;
+    }
+
+    .col-image {
+        padding: 0px;
+    }
+
+    .col-image img {
+        margin-bottom: 40px;
+    }
+
+    .search-text-column h1 {
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .search-text-column h3 {
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .form-search-column .btn-serach {
+        height: 40px;
+        position: relative;
+    }
+
+    .property-info-column p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .btn-videos, .btn-photos {
+        font-size: 15px;
+    }
+
+    .btn-blueprint {
+        font-size: 15px;
+        gap: 4px;
+    }
+
+    .btn-virtual-tour {
+        font-size: 16px;
+    }
+
+    .property-images img {
+        margin-top: 40px;
+        height: 370px;
+        object-position: 0px 0px;
+    }
+
+    .property-main-delatils-column .property-price {
+        text-align: center;
+    }
+
+    .property-info-beds-column {
+        padding: 0px 0.8rem;
+    }
+
+    .office-column h4 {
+        text-align: center;
+    }
+
+    .office-column ul li {
+        text-align: center;
+    }
+
+    .developed-column {
+        text-align: center;
+    }
+
+    .hero-banner {
+        position: relative;
+    }
+
+    .container-hero-banner {
+        top: 400px;
+        left: 0px;
+        padding: 0px 40px;
+    }
+
+    .hero-banner__title {
+        font-size: 27.52px;
+        font-weight: 400;
+        line-height: 30.54px;
+        text-align: left;
+    }
+
+    .hero-banner__title_2 {
+        font-size: 27.52px;
+        font-weight: 400;
+        line-height: 30.54px;
+        text-align: left;
+        margin-bottom: 26px;
+    }
+
+    .btn-hero {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        padding: 12px 15px;
+    }
+
+    .about-us-section {
+        margin-top: -40px;
+    }
+
+    .about-us-column div {
+        width: 90%;
+    }
+
+    .about-us-row {
+        flex-direction: column-reverse;
+    }
+
+    .vector-col {
+        padding: 195px;
+    }
+
+    .img-about-us-section {
+        top: 36px;
+        right: 36px;
+        width: 81%;
+    }
+
+    .about-us-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .topics-section {
+        height: 870px;
+    }
+
+    .btn-about-us {
+        font-size: 14px;
+    }
+
+    .art-1 {
+        height: 460px;
+        background-position-x: -400px;
+    }
+
+    .photo-gallery-section {
+        height: 260px;
+    }
+
+    .get-an-estimate-section {
+        position: relative;
+    }
+
+    .get-an-estimate-section h1 {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 38px;
+        text-align: left;
+
+    }
+
+    .get-an-estimate-vector {
+        right: 0px;
+        top: 0px;
+        width: 120px;
+    }
+
+    .get-an-estimate-testimonial {
+        margin-top: 40px;
+        border-left: none;
+    }
+
+    .art-2 h1 {
+        font-size: 70.12px;
+        line-height: 75.71px;
+    }
+
+    .art-2-vector-orange {
+        display: none;
+    }
+
+    .art-2-vector-black {
+        display: none;
+    }
+
+    #carousel-indicators-dot .carousel-item img {
+        object-fit: cover;
+        height: 260px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+        top: 625px;
+    }
+    
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 95px;
+    }
+    
+    .owl-carousel .owl-nav button.owl-next {
+        right: 95px;
+    }
 }
+

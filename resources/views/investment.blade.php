@@ -3,6 +3,47 @@
 <body>
     @include('includes.navbar')
 
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible w-100" role="alert">
+            <div class="d-flex">
+                <div>
+                    <!-- Download SVG icon from http://tabler-icons.io/i/check -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon alert-icon">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 12l5 5l10 -10"></path>
+                    </svg>
+                </div>
+                <div>
+                    {{ session('success') }}
+                </div>
+            </div>
+            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div class="alert alert-danger" role="alert">
+            <div class="d-flex">
+                <div>
+                    <!-- Download SVG icon from http://tabler-icons.io/i/alert-circle -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon alert-icon">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                        <path d="M12 8v4"></path>
+                        <path d="M12 16h.01"></path>
+                    </svg>
+                </div>
+                <div>
+                    {{ session('error') }}
+                </div>
+            </div>
+        </div>
+    @endif
+
     <section class="investment-section">
         <img src="{{ asset('assets/images/Vector 15.png') }}" alt="">
         <div class="container-fluid h-100">
@@ -16,36 +57,37 @@
                             At Mega Contractors,
                             we also work on projects based on
                             investment purposes.
-                            
+
                         </p>
                         <p class="investment-presentation-paragraph">
                             Be it a residential or non-residential project, we have a highly skilled workforce and the
                             expertise to see it through to completion. Get in touch with us today to learn more about
                             our work:
                         </p>
-                        <form action="">
+                        <form action="{{ route('send-investment') }}"  method="POST">
+                            @csrf
                             <div class="row w-100 mb-3">
                                 <div class="col">
                                     <div class="form-label">NAME</div>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="name">
                                 </div>
                             </div>
                             <div class="row w-100 mb-3">
                                 <div class="col">
                                     <div class="form-label">EMAIL</div>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="email">
                                 </div>
                             </div>
                             <div class="row w-100 mb-3">
                                 <div class="col">
                                     <div class="form-label">PHONE</div>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="phone">
                                 </div>
                             </div>
                             <div class="row w-100 mb-2">
                                 <div class="col">
                                     <div class="form-label">MESSAGE</div>
-                                    <textarea class="form-control" name="example-textarea-input" rows="6"></textarea>
+                                    <textarea class="form-control" name="message" rows="6"></textarea>
                                 </div>
                             </div>
                             <div class="row w-100 mb-2">
@@ -75,18 +117,19 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="row mb-3 py-4 px-3" style="border-bottom: 1px solid #fb5000;">
-                        <div class="col-md-3">
+                        <div class="col-md-3 investment-icons">
                             <img src="{{ asset('assets/images/icons/sucesso 1.svg') }}" alt="">
                         </div>
                         <div class="col-md-9 d-flex justify-content-center align-items-center flex-column">
                             <h2 class="mb-3">18+ years of experience</h2>
                             <p>
-                                Our years of expertise have allowed us to deliver high-quality projects that surpass our clients' expectations.
+                                Our years of expertise have allowed us to deliver high-quality projects that surpass our
+                                clients' expectations.
                             </p>
                         </div>
                     </div>
                     <div class="row mb-3 py-4 px-3" style="border-bottom: 1px solid #fb5000;">
-                        <div class="col-md-3">
+                        <div class="col-md-3 investment-icons">
                             <img src="{{ asset('assets/images/icons/solucao 1.svg') }}" alt="">
                         </div>
                         <div class="col-md-9 d-flex justify-content-center align-items-center flex-column">
@@ -97,13 +140,14 @@
                         </div>
                     </div>
                     <div class="row mb-3 py-4 px-3">
-                        <div class="col-md-3">
+                        <div class="col-md-3 investment-icons">
                             <img src="{{ asset('assets/images/icons/despesa 1.svg') }}" alt="">
                         </div>
                         <div class="col-md-9 d-flex justify-content-center align-items-center flex-column">
                             <h2 class="mb-3">Financial strength and established relationships with lenders</h2>
                             <p>
-                                Since we've been in the market for over 18+ years, we've garnered and fostered strong relationships with longtime investors and lenders.
+                                Since we've been in the market for over 18+ years, we've garnered and fostered strong
+                                relationships with longtime investors and lenders.
                             </p>
                         </div>
                     </div>

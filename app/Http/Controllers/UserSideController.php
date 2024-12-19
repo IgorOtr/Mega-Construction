@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserSideController extends Controller
 {
@@ -23,7 +25,8 @@ class UserSideController extends Controller
 
     public function renderDevelopmentPage()
     {
-        return view('development');
+        $properties = DB::table('properties')->orderBy('id','DESC')->get();
+        return view('development', compact('properties'));
     }
 
     public function renderConstructionsPage()
@@ -38,7 +41,8 @@ class UserSideController extends Controller
 
     public function renderPropertiesPage()
     {
-
+        $properties = DB::table('properties')->orderBy('id','DESC')->get();
+        return view('our-properties', compact('properties'));
     }
 
     public function renderCareersPage()

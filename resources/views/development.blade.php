@@ -21,7 +21,7 @@
                             experience to make sure it's completed flawlessly. Look through the featured and completed
                             projects we have worked on recently.
                         </p>
-                        <a href="">CONTACT US</a>
+                        <a href="{{ route('contact-us') }}">CONTACT US</a>
                     </div>
                 </div>
             </div>
@@ -36,15 +36,15 @@
                         Features Projects
                     </h1>
                     <div class="w-100 text-end">
-                        <img src="{{ asset('assets/images/Vector 7.png') }}" alt="">
+                        <img class="fetured-projects-vector" src="{{ asset('assets/images/Vector 7.png') }}"
+                            alt="">
                     </div>
 
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-7">
+                <div class="col-md-7 margin-negative">
                     <div class="w-100 text-center mb-3">
-                        <img src="{{ asset('assets/images/female-working-environment-projects.jpg') }}"
-                            alt="">
+                        <img src="{{ asset('assets/images/female-working-environment-projects.jpg') }}" alt="">
                     </div>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -69,91 +69,37 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <div class="col-md-4 mb-3">
-                    <div class="property-card">
-                        <div class="property-card-header">
-                            <img src="{{ asset('assets/images/house-architectural-design.jpg') }}" alt="">
-                        </div>
-                        <div class="property-card-body">
-                            <p class="property-price">$354,999</p>
-                            <p class="property-info"><strong>5</strong> bds  |  <strong>3</strong> ba  |  <strong>1,806</strong> sqft  |  Active</p>
-                            <p class="property-address">6107 L St, Capitol Leights, MD - 27743</p>
-                            <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
-                        </div>
+
+
+                @foreach ($properties as $property)
+                    <div class="col-md-4 mb-3">
+                        <a href="{{ $property->p_zillow_url }}" target="_blank">
+                            <div class="property-card">
+                                <div class="property-card-header">
+                                    <img src="{{ asset('assets/images/properties_img/' . $property->p_cover_img) }}"
+                                        alt="">
+                                </div>
+                                <div class="property-card-body">
+                                    <p class="property-price">{{ $property->p_price }}</p>
+                                    <p class="property-info"><strong>{{ $property->p_bedroom }}</strong> beds |
+                                        <strong>{{ $property->p_bathroom }}</strong> baths |
+                                        <strong>{{ $property->p_area }}</strong> sqft | Active</p>
+                                    <p class="property-address">{{ $property->p_address }}</p>
+                                    <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
+                                </div>
+                            </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="property-card">
-                        <div class="property-card-header">
-                            <img src="{{ asset('assets/images/house-architectural-design.jpg') }}" alt="">
-                        </div>
-                        <div class="property-card-body">
-                            <p class="property-price">$354,999</p>
-                            <p class="property-info"><strong>5</strong> bds  |  <strong>3</strong> ba  |  <strong>1,806</strong> sqft  |  Active</p>
-                            <p class="property-address">6107 L St, Capitol Leights, MD - 27743</p>
-                            <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="property-card">
-                        <div class="property-card-header">
-                            <img src="{{ asset('assets/images/house-architectural-design.jpg') }}" alt="">
-                        </div>
-                        <div class="property-card-body">
-                            <p class="property-price">$354,999</p>
-                            <p class="property-info"><strong>5</strong> bds  |  <strong>3</strong> ba  |  <strong>1,806</strong> sqft  |  Active</p>
-                            <p class="property-address">6107 L St, Capitol Leights, MD - 27743</p>
-                            <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="property-card">
-                        <div class="property-card-header">
-                            <img src="{{ asset('assets/images/house-architectural-design.jpg') }}" alt="">
-                        </div>
-                        <div class="property-card-body">
-                            <p class="property-price">$354,999</p>
-                            <p class="property-info"><strong>5</strong> bds  |  <strong>3</strong> ba  |  <strong>1,806</strong> sqft  |  Active</p>
-                            <p class="property-address">6107 L St, Capitol Leights, MD - 27743</p>
-                            <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="property-card">
-                        <div class="property-card-header">
-                            <img src="{{ asset('assets/images/house-architectural-design.jpg') }}" alt="">
-                        </div>
-                        <div class="property-card-body">
-                            <p class="property-price">$354,999</p>
-                            <p class="property-info"><strong>5</strong> bds  |  <strong>3</strong> ba  |  <strong>1,806</strong> sqft  |  Active</p>
-                            <p class="property-address">6107 L St, Capitol Leights, MD - 27743</p>
-                            <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="property-card">
-                        <div class="property-card-header">
-                            <img src="{{ asset('assets/images/house-architectural-design.jpg') }}" alt="">
-                        </div>
-                        <div class="property-card-body">
-                            <p class="property-price">$354,999</p>
-                            <p class="property-info"><strong>5</strong> bds  |  <strong>3</strong> ba  |  <strong>1,806</strong> sqft  |  Active</p>
-                            <p class="property-address">6107 L St, Capitol Leights, MD - 27743</p>
-                            <p class="mega-info">MLS ID 11MDPG2109426, MEGA CONSTRUCTION</p>
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                @endforeach
+
+
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center w-100">
-                        <a href="#" class="btn-find-your-dreams w-100">SEE MORE</a>
+                        <a href="{{ route('our-properties') }}" class="btn-find-your-dreams w-100">SEE MORE</a>
                     </div>
-    
+
                 </div>
             </div>
         </div>

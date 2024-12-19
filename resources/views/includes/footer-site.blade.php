@@ -3,7 +3,8 @@
         <div class="row">
 
             <div class="col-md-4 text-center logo-and-social-column">
-                <a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo Mega_Contractor-02.png') }}" alt=""></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo Mega_Contractor-02.png') }}"
+                        alt=""></a>
                 <ul class="d-flex">
                     <li>
                         <a href="">
@@ -66,7 +67,7 @@
                     <li><a href="{{ route('development') }}">Development</a></li>
                     <li><a href="{{ route('constructions') }}">Construction</a></li>
                     <li><a href="{{ route('investment') }}">Investment</a></li>
-                    <li><a href="">Our Properties</a></li>
+                    <li><a href="{{ route('our-properties') }}">Our Properties</a></li>
                     <li><a href="{{ route('careers') }}">Careers</a></li>
                     <li><a href="">Estimate</a></li>
                     <li><a href="">Newsletter</a></li>
@@ -118,7 +119,7 @@
                     © 2024 Mega Construction. All Rights Reserved. | Developed by: <a href=""><img
                             src="{{ asset('assets/images/Adapt ADVERTISING 1.png') }}" alt=""></a>
                 </p>
-                <a class="up-arrow" href="#up">
+                <buton type="button" class="up-arrow" onclick="toUpSide()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"
@@ -128,13 +129,16 @@
                         <path d="M16 9l-4 -4" />
                         <path d="M8 9l4 -4" />
                     </svg>
-                </a>
+                </buton>
             </div>
         </div>
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
 
 <script>
@@ -168,4 +172,52 @@
             imagesPreview(this, 'div.gallery');
         });
     });
+</script>
+
+<script>
+    const toUpSide = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+<script>
+    var myFile = "";
+
+    $('#file').on('change', function() {
+
+        myFile = $("#file").val();
+        console.log(myFile);
+        var upld = myFile.split('.').pop();
+        if (upld != 'pdf') {
+            alert("Only PDF are allowed")
+            window.location.reload();
+        }
+
+    })
+</script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 40,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 1,
+                nav: true
+            },
+            1000: {
+                items:3,
+                nav: true,
+                loop: true
+            }
+        }
+    })
 </script>

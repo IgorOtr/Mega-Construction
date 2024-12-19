@@ -18,6 +18,14 @@ Route::get('/investment', [UserSideController::class, 'renderInvestmentPage'])->
 Route::get('/our-properties', [UserSideController::class,'renderPropertiesPage'])->name('our-properties');
 Route::get('/careers', [UserSideController::class,'renderCareersPage'])->name('careers');
 Route::get('/contact-us', [UserSideController::class, 'renderContactUsPage'])->name('contact-us');
+// Route::get('/property-details', [PropertyController::class, 'getPropertyDetails'])->name('property-details');
+
+Route::post('/contact-us', [MailController::class, 'sendContactEmailFromContactForm'])->name('send-contact');
+Route::post('/careers', [MailController::class, 'sendContactEmailFromCareersForm'])->name('send-careers');
+Route::post('/get-an-estimate', [MailController::class, 'sendContactEmailGetAnEstimate'])->name('send-get-an-estimate');
+Route::post('/investment', [MailController::class, 'sendContactEmailFromInvestmentPage'])->name('send-investment');
+
+
 
 
 Route::group(['prefix' => 'Admin'], function() {
