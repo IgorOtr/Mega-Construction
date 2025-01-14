@@ -51,7 +51,7 @@
     @endif
 
     <section class="careers-section">
-        <img class="contact-us-vector" src="{{ asset('assets/images/Vector 5.png') }}" alt="">
+        <img class="contact-us-vector" src="{{ asset('assets/images/Vector 5.webp') }}" alt="">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 form-contact-us-column">

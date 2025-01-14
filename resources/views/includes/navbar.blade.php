@@ -9,7 +9,7 @@
             <div class="col-md-4 text-center col-img-nav">
                 <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                     <a href="{{ route('coming-soon') }}">
-                        <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.png') }}" alt="">
+                        <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.webp') }}" alt="">
                     </a>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                             <a class="nav-link {{ (Route::current()->getName() == 'development')  ? 'nav-active' : '' }}" aria-label="Go To Development Page" href="{{ route('development') }}">Development</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ (Route::current()->getName() == 'constructions')  ? 'nav-active' : '' }}" aria-label="Go To Constructions Page" href="{{ route('constructions') }}">Constructions</a>
+                            <a class="nav-link {{ (Route::current()->getName() == 'constructions')  ? 'nav-active' : '' }}" aria-label="Go To Constructions Page" href="{{ route('constructions') }}">Construction</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ (Route::current()->getName() == 'investment')  ? 'nav-active' : '' }}" aria-label="Go To Investment Page" href="{{ route('investment') }}">Investment</a>

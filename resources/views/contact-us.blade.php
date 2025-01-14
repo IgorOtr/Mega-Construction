@@ -4,6 +4,10 @@
     .alert {
     z-index: 999999999999;
 }
+
+.form-contact-us-column {
+    background-color: #141414;
+}
 </style>
 
 <body>
@@ -51,7 +55,7 @@
     @endif
 
     <section class="contact-us-section">
-        <img class="contact-us-vector" src="{{ asset('assets/images/Vector 5.png') }}" alt="">
+        {{-- <img class="contact-us-vector" src="{{ asset('assets/images/Vector 5.webp') }}" alt=""> --}}
         <div class="container">
             <div class="row">
                 <div class="col-md-6 form-contact-us-column">
@@ -107,7 +111,7 @@
                         <div class="row">
                             <div class="col mb-3">
 
-                                <button type="submit" class="btn-find-home">SAND MESSAGE</button>
+                                <button type="submit" class="btn-find-home">SEND MESSAGE</button>
 
                             </div>
                         </div>
@@ -117,14 +121,14 @@
                     </p>
                     <div class="row social-row">
                         <div class="col-md-6">
-                            <a href="" class="">
-                                <img src="{{ asset('assets/images/instagram 1.png') }}" alt="">
+                            <a href="https://www.instagram.com/megacontractorsinc/" target="_blank" class="">
+                                <img src="{{ asset('assets/images/instagram 1.webp') }}" alt="">
                             </a>
-                            <a href="" class="">
-                                <img src="{{ asset('assets/images/facebook 1.png') }}" alt="">
+                            <a href="https://www.facebook.com/profile.php?id=61566933914298" target="_blank" class="">
+                                <img src="{{ asset('assets/images/facebook 1.webp') }}" alt="">
                             </a>
-                            <a href="" class="">
-                                <img src="{{ asset('assets/images/instagram 1.png') }}" alt="">
+                            <a href="https://www.youtube.com/@MegaContractorsinc" target="_blank" class="">
+                                <img src="{{ asset('assets/images/youtube.webp') }}" alt="">
                             </a>
                         </div>
                     </div>

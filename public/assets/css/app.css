@@ -96,9 +96,13 @@ a {
     margin-top: -6px;
 }
 
+.hero-banner {
+    position: relative;
+}
+
 .container-hero-banner {
     position: absolute;
-    top: 520px;
+    top: 390px;
     left: 267px;
 }
 
@@ -131,15 +135,15 @@ a {
 }
 
 .vector-col {
-    background-image: url(../images/Vector-3.png);
+    background-image: url(../images/Vector-3.webp);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 385px;
 }
 
 .about-us-section {
-    margin-top: -50px;
     position: relative;
+    margin-top: -50px;
 }
 
 .img-about-us-section {
@@ -206,7 +210,8 @@ a {
 
 .ct-head p {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 13px;
+    height: 60px;
 }
 
 .btn-topics {
@@ -227,28 +232,36 @@ a {
 }
 
 .art-1 {
-    background-image: url(../images/ARTE-01.png);
+    background-image: url(../images/ARTE-01.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .vector-find-home {
-    background-image: url(../images/FIND-HOME.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 385px;
+    padding: 0px;
+}
+
+.vector-find-home img {
+    width: 100%;
 }
 
 .form-find-home h1 {
+    width: 50%;
     color: #141414;
-    font-size: 69px;
+    font-size: 60px;
     font-weight: 800;
     line-height: 65px;
 }
 
+.find-home-section {
+    margin-bottom: -3px;
+}
+
 .find-home-section form {
-    width: 56%;
+    width: 50%;
 }
 
 .find-home-section .form-select {
@@ -294,6 +307,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .get-an-estimate-section h1 {
@@ -306,7 +320,7 @@ a {
 .get-an-estimate-vector {
     position: absolute;
     right: 0px;
-    top: 5036px;
+    top: 0px;
 }
 
 .get-an-estimate-form {
@@ -351,7 +365,7 @@ a {
 
 .get-an-estimate-testimonial h2 {
     color: #fb5000;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 45px;
 }
@@ -377,7 +391,8 @@ a {
 }
 
 .art-2 {
-    background-image: url(../images/art-2.png);
+    position: relative;
+    background-image: url(../images/art-2.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
@@ -388,12 +403,12 @@ a {
 
 .art-2-vector-orange {
     position: absolute;
-    top: 5936.7px;
+    top: 0px;
     left: 1033px;
 }
 .art-2-vector-black {
     position: absolute;
-    top: 6630.7px;
+    bottom: 0px;
     left: 827px;
 }
 
@@ -517,10 +532,13 @@ a {
 }
 
 .contact-us-section {
-    background-image: url(../images/327f6684f29e5672e11d63e0f5c43227.jpeg);
+    position: relative;
+    background-image: url(../images/327f6684f29e5672e11d63e0f5c43227.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1350px;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
 }
 
 .contact-us-section h1,
@@ -541,7 +559,9 @@ form,
 
 .form-contact-us-column {
     padding-top: 90px;
-    padding-left: 140px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 55px;
 }
 
 .contact-us-paragraph {
@@ -563,8 +583,8 @@ form,
 .contact-us-vector {
     position: absolute;
     z-index: 1;
-    top: 85px;
-    width: 963px;
+    top: 0px;
+    left: 110px;
 }
 
 .form-contact-us-column .form-label {
@@ -596,7 +616,7 @@ form,
 }
 
 .constructions-section {
-    background-image: url(../images/0b9f91c3d7cfa9909b86096c065e4fbf.jpeg);
+    background-image: url(../images/0b9f91c3d7cfa9909b86096c065e4fbf.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -647,12 +667,13 @@ form,
 .get-an-estimate-vector-constructions {
     position: absolute;
     right: 0px;
-    top: 897px;
+    top: 0px;
 }
 
 .featured-projects {
     background-color: #ffffff;
     height: 850px;
+    margin-bottom: -40px;
 }
 
 .featured-projects .col-md-4,
@@ -679,8 +700,9 @@ form,
     text-align: left;
 }
 
-.completed-projects {
-    background-image: url(../images/4c69e372208d3b54dd05fa76a9306aa6.jpeg);
+.completed-projects { 
+    position: relative;
+    background-image: url(../images/4c69e372208d3b54dd05fa76a9306aa6.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -694,17 +716,17 @@ form,
 
 .completed-projects h1 {
     position: absolute;
-    top: 2720px;
+    top: 70px;
     text-align: right;
     font-size: 64px;
     color: #141414;
     font-weight: 700;
     line-height: 71.04px;
-    right: 400px;
+left: 937px;
 }
 
 .investment-section {
-  background-image: url(../images/analog-landscape-city-with-buildings.jpg);
+  background-image: url(../images/analog-landscape-city-with-buildings.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 1100px;
@@ -799,7 +821,7 @@ form,
 
 .help-us-section h1 {
     color: #141414;
-    font-size: 71.84px;
+    font-size: 60px;
     font-weight: 700;
     line-height: 79.74px;
     letter-spacing: -0.04em;
@@ -810,7 +832,8 @@ form,
 }
 
 .careers-section {
-    background-image: url(../images/bdd748a92e4dbf62e8d8e565255e3c2a.jpeg);
+    position: relative;
+    background-image: url(../images/bdd748a92e4dbf62e8d8e565255e3c2a.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 1120px;
@@ -833,7 +856,7 @@ form,
 }
 
 .development-section {
-    background-image: url(../images/eeee9d53524431f14a74f15277ad87af.jpeg) !important;
+    background-image: url(../images/eeee9d53524431f14a74f15277ad87af.webp) !important;
     background-size: cover;
     background-position-x: -480px;
     background-position-y: -220px;
@@ -848,7 +871,7 @@ form,
 }
 
 .find-your-dream-section {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 80px;
 }
 
@@ -999,8 +1022,9 @@ form,
 .group-and-logo-mega {
     position: absolute;
     z-index: 2;
-    top: 77px;
-    right: 250px;
+    top: 42px;
+    right: 194px;
+    width: 700px;
 }
 
 .our-missin-vision-section {
@@ -1044,7 +1068,6 @@ form,
 
 .our-values-section {
     background-color: #fb5000;
-    height: 625px;
     position: relative;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -1111,7 +1134,7 @@ form,
 }
 
 .usa-flag-bg {
-    background-image: url(../images/d7591e15089aaf7928bd013e01925ec4.jpeg);
+    background-image: url(../images/d7591e15089aaf7928bd013e01925ec4.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1149,7 +1172,7 @@ form,
 
 .clients-feedback-section {
     position: relative;
-    height: 810px;
+    height: 660px;
     background-color: #141414;
 }
 
@@ -1211,7 +1234,7 @@ form,
 }
 
 .our-properties-banner {
-    background-image: url(../images/f5e9d2f1be532c54d7a4f50587203180.jpeg);
+    background-image: url(../images/f5e9d2f1be532c54d7a4f50587203180.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -470px;
@@ -1501,12 +1524,12 @@ form,
 }
 
 .carousel-get-an-estimate {
-    margin-left: 80px;
+    padding-left: 40px;
 }
 
 .carousel-get-an-estimate-indicators {
     bottom: -70px;
-    left: -225px;
+    left: -200px;
 }
 
 .carousel-indicators-dot [data-bs-target] {
@@ -1516,6 +1539,15 @@ form,
 .carousel-indicators .active {
     opacity: 1;
     background-color: #fb5000;
+}
+
+.form-find-home .form-control {
+    border: 2px solid #fb5000;
+}
+
+.ct-body img {
+    height: 490px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -1662,11 +1694,12 @@ form,
     }
 
     .vector-find-home {
-        padding: 150px;
+        display: none;
     }
 
     .form-find-home {
         padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .form-find-home h1 {
@@ -1885,7 +1918,7 @@ form,
     }
 
     .container-hero-banner {
-        top: 400px;
+        top: 300px;
         left: 0px;
         padding: 0px 40px;
     }
@@ -1918,6 +1951,7 @@ form,
 
     .about-us-column div {
         width: 90%;
+        text-align: center;
     }
 
     .about-us-row {
@@ -1931,7 +1965,7 @@ form,
     .img-about-us-section {
         top: 36px;
         right: 36px;
-        width: 81%;
+        width: 316px;
     }
 
     .about-us-column {
@@ -1939,8 +1973,8 @@ form,
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .topics-section {
@@ -1952,7 +1986,7 @@ form,
     }
 
     .art-1 {
-        height: 460px;
+        height: 470px;
         background-position-x: -400px;
     }
 
@@ -1985,8 +2019,8 @@ form,
     }
 
     .art-2 h1 {
-        font-size: 70.12px;
-        line-height: 75.71px;
+        font-size: 64px;
+        line-height: 75px;
     }
 
     .art-2-vector-orange {
@@ -2012,6 +2046,50 @@ form,
     
     .owl-carousel .owl-nav button.owl-next {
         right: 95px;
+    }
+
+    .carousel-get-an-estimate-indicators {
+        left: -72px;
+    }
+
+    .name-and-stars-testimonial {
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .name-and-stars-testimonial ul {
+        padding: 0px;
+    }
+
+    .completed-projects-development h1 {
+        top: 20px;
+    }
+
+    .completed-projects img {
+        left: 108px;
+        width: 282px;
+    }
+
+    .completed-projects h1 {
+        top: 30px;
+        font-size: 39px;
+        line-height: 40px;
+        right: 15px;
+    }
+
+    .get-an-estimate-testimonial div p {
+        font-size: 18px;
+    }
+
+    .carousel-get-an-estimate {
+        padding: 25px;
+    }
+
+    .get-an-estimate-testimonial div {
+        width: 100%;
+        text-align: center;
     }
 }
 

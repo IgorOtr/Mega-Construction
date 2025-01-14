@@ -1,6 +1,15 @@
 @include('includes.head')
 
 <style>
+
+    .bg-overlay {
+        background-color: #141414cf;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
     @media screen and (max-width: 768px) {
         .form-find-home h1 {
             font-size: 49px;
@@ -54,8 +63,9 @@
     @endif
 
     <section class="hero-banner">
-        <video autoplay muted loop id="myVideo">
-            <source src="{{ asset('assets/videos/-1ff4-4e02-9182-542e635521ac.mp4') }}" type="video/mp4">
+        <div class="bg-overlay"></div>
+        <video autoplay muted loop preload="metadata" playsinline id="myVideo">
+            <source src="{{ asset('assets/videos/-1ff4-4e02-9182-542e635521ac.webm') }}">
         </video>
 
         <div class="container container-hero-banner">
@@ -100,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 vector-col">
-                    <img class="img-about-us-section" src="{{ asset('assets/images/mask-group.png') }}" alt="">
+                    <img class="img-about-us-section" src="{{ asset('assets/images/mask-group.webp') }}" alt="">
                 </div>
             </div>
         </div>
@@ -128,10 +138,10 @@
                                         </div>
                                         <div class="ct-body">
                                             <img style="width: 100%"
-                                                src="{{ asset('assets/images/drawing-project.png') }}" alt="">
+                                                src="{{ asset('assets/images/drawing-project.webp') }}" alt="">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,11 +159,11 @@
                                             </p>
                                         </div>
                                         <div class="ct-body">
-                                            <img style="width: 100%; height: 490px;" src="{{ asset('assets/images/architeture.jpg') }}"
+                                            <img style="width: 100%;" src="{{ asset('assets/images/architeture.webp') }}"
                                                 alt="">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -169,11 +179,11 @@
                                             </p>
                                         </div>
                                         <div class="ct-body">
-                                            <img style="width: 100%" src="{{ asset('assets/images/contruction.jpg') }}"
+                                            <img style="width: 100%" src="{{ asset('assets/images/contruction.webp') }}"
                                                 alt="">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -182,18 +192,18 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1>Development</h1>
+                                            <h1 style="margin-top: 32px;">Development</h1>
                                             <div class="line-separator w-100"></div>
                                             <p>
                                                 We work with a wide range of businesses to develop quality projects that help shape communities.
                                             </p>
                                         </div>
                                         <div class="ct-body">
-                                            <img style="width: 100%"
-                                                src="{{ asset('assets/images/development.jpg') }}" alt="">
+                                            <img style="width: 100%;"
+                                                src="{{ asset('assets/images/development.webp') }}" alt="">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('development') }}" class="btn-topics">Get in touch with us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -202,18 +212,18 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1>Investment</h1>
+                                            <h1 style="margin-top: 32px;">Investment</h1>
                                             <div class="line-separator w-100"></div>
                                             <p>
                                                 Our investment solutions are suited to meet our clients' needs, focused on delivering high-quality projects.
                                             </p>
                                         </div>
                                         <div class="ct-body">
-                                            <img style="width: 100%"
-                                                src="{{ asset('assets/images/investment.jpg') }}" alt="">
+                                            <img style="width: 100%;"
+                                                src="{{ asset('assets/images/investment.webp') }}" alt="">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('investment') }}" class="btn-topics">Get in touch with us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +251,7 @@
                             </p>
                         </div>
                         <div class="ct-body">
-                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.png') }}"
+                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.webp') }}"
                                 alt="">
                         </div>
                         <div class="ct-footer">
@@ -261,7 +271,7 @@
                             </p>
                         </div>
                         <div class="ct-body">
-                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.png') }}"
+                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.webp') }}"
                                 alt="">
                         </div>
                         <div class="ct-footer">
@@ -281,7 +291,7 @@
                             </p>
                         </div>
                         <div class="ct-body">
-                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.png') }}"
+                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.webp') }}"
                                 alt="">
                         </div>
                         <div class="ct-footer">
@@ -299,20 +309,17 @@
     <section class="find-home-section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 vector-find-home"></div>
+                <div class="col-md-6 vector-find-home">
+                    <img src="{{ asset('assets/images/FIND-HOME.webp') }}" alt="">
+                </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center flex-column form-find-home">
                     <h1>FIND YOUR<br>DREAM HOME</h1>
                     <form action="" class="mt-3">
-
                         <div class="row">
                             <div class="col mb-3">
 
                                 <div class="form-label">STATE</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                         </div>
@@ -321,11 +328,7 @@
                             <div class="col mb-3">
 
                                 <div class="form-label">CITY</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                         </div>
@@ -333,21 +336,13 @@
                             <div class="col mb-3">
 
                                 <div class="form-label">NUMBER OF BEDROOMS</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                             <div class="col mb-3">
 
                                 <div class="form-label">NUMBER OF BATHROOMS</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                         </div>
@@ -356,9 +351,10 @@
 
                                 <div class="form-label">PRICE RANGE</div>
                                 <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="" selected>Select an option</option>
+                                    <option value="1">$0 - $100.000</option>
+                                    <option value="2">$100.000 - $300.000</option>
+                                    <option value="3">$300.000+</option>
                                 </select>
 
                             </div>
@@ -366,7 +362,7 @@
                         <div class="row">
                             <div class="col mb-3">
 
-                                <button type="submit" class="btn-find-home">SEARCH</button>
+                                <a href="{{ route('our-properties') }}" class="btn-find-home">SEARCH</a>
 
                             </div>
                         </div>
@@ -392,26 +388,26 @@
             <div class="carousel-inner h-100">
                 <div class="carousel-item active">
                     <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/analog-landscape-city-with-buildings.jpg') }}">
+                        src="{{ asset('assets/images/analog-landscape-city-with-buildings.webp') }}">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/3d-house-model-with-modern-architecture.jpg') }}">
+                        src="{{ asset('assets/images/3d-house-model-with-modern-architecture.webp') }}">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/3d-rendering-house-model (1).jpg') }}">
+                        src="{{ asset('assets/images/3d-rendering-house-model (1).webp') }}">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/house-is-listed-1-5-million.jpg') }}">
+                        src="{{ asset('assets/images/house-is-listed-1-5-million.webp') }}">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="get-an-estimate-section">
-        <img class="get-an-estimate-vector" src="{{ asset('assets/images/Vector-8.png') }}" alt="">
+    <section class="get-an-estimate-section" id="estimate">
+        <img class="get-an-estimate-vector" src="{{ asset('assets/images/Vector-8.webp') }}" alt="">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 get-an-estimate-form">
@@ -490,7 +486,7 @@
                         <div class="carousel-inner w-100">
                             <div class="carousel-item w-100 active">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                                     <p>
                                         I highly recommend Mega to everyone looking to get into the development market.
                                         I've worked
@@ -498,7 +494,7 @@
                                         them before and they have exceeded my expectations every time.
                                     </p>
                                     <div class="name-and-stars-testimonial">
-                                        <h2>Michael</h2>
+                                        <h2>Michael L.</h2>
                                         <ul>
                                             <li>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -551,7 +547,7 @@
                             </div>
                             <div class="carousel-item w-100">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                                     <p>
                                         I highly recommend Mega to everyone looking to get into the development market.
                                         I've worked
@@ -559,7 +555,7 @@
                                         them before and they have exceeded my expectations every time.
                                     </p>
                                     <div class="name-and-stars-testimonial">
-                                        <h2>Michael 2</h2>
+                                        <h2>Oliver A.</h2>
                                         <ul>
                                             <li>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -612,7 +608,7 @@
                             </div>
                             <div class="carousel-item w-100">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                                     <p>
                                         I highly recommend Mega to everyone looking to get into the development market.
                                         I've worked
@@ -620,7 +616,7 @@
                                         them before and they have exceeded my expectations every time.
                                     </p>
                                     <div class="name-and-stars-testimonial">
-                                        <h2>Michael 3</h2>
+                                        <h2>Amelia J.</h2>
                                         <ul>
                                             <li>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -673,7 +669,7 @@
                             </div>
                             <div class="carousel-item w-100">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                                     <p>
                                         I highly recommend Mega to everyone looking to get into the development market.
                                         I've worked
@@ -681,7 +677,7 @@
                                         them before and they have exceeded my expectations every time.
                                     </p>
                                     <div class="name-and-stars-testimonial">
-                                        <h2>Michael 4</h2>
+                                        <h2>Emma P.</h2>
                                         <ul>
                                             <li>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -740,8 +736,8 @@
     </section>
 
     <section class="art-2">
-        <img class="art-2-vector-orange" src="{{ asset('assets/images/Vector 7.png') }}" alt="">
-        <img class="art-2-vector-black" src="{{ asset('assets/images/Vector 9.png') }}" alt="">
+        <img class="art-2-vector-orange" src="{{ asset('assets/images/Vector 7.webp') }}" alt="">
+        <img class="art-2-vector-black" src="{{ asset('assets/images/Vector 9.webp') }}" alt="">
 
         <div class="container">
             <div class="row">
@@ -752,7 +748,7 @@
                     <p>
                         Subscribe to our newsletter to be on the loop about our latest news and projects.
                     </p>
-                    <a class="btn-art-2" href="">SUBSCRIBE NOW</a>
+                    <a class="btn-art-2" href="{{ route('contact-us') }}">SUBSCRIBE NOW</a>
                 </div>
                 <div class="col-md-6">
 

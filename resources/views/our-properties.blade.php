@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-4 col-image">
-                    <img class="w-100" src="{{ asset('assets/images/search-image.png') }}" alt="">
+                    <img class="w-100" src="{{ asset('assets/images/search-image.webp') }}" alt="">
                 </div>
                 <div class="col-md-8 d-flex justify-content-center flex-column search-text-column">
                     <h1>
@@ -32,7 +32,7 @@
                                 <input type="text" class="form-control" placeholder="Search by price range">
                             </div>
                             <div class="col-md-2 mb-3">
-                                <label for="" class="form-label">NUMBER OF BEFROOMS</label>
+                                <label for="" class="form-label">NUMBER OF BEDROOMS</label>
                                 <input type="text" class="form-control" placeholder="Search by location">
                             </div>
                             <div class="col-md-2 mb-3">
@@ -44,7 +44,7 @@
                                 <input type="text" class="form-control" placeholder="Search by price range">
                             </div>
                             <div class="col-md-1 mb-3 position-relative">
-                                <button type="submit" class="btn-serach"><img src="{{ asset('assets/images/icons/lupa 1.svg') }}" alt=""></button>
+                                <a href="#properties" class="btn-serach d-flex justify-content-center"><img width="25" src="{{ asset('assets/images/icons/lupa 1.svg') }}" alt=""></a>
                             </div>
                         </div>
                     </form>
@@ -52,12 +52,12 @@
             </div>
             <div class="row">
                 <div class="col-12 search-map-column">
-                    <img src="{{ asset('assets/images/508eb78a1ac6ca081729ffd6b984c99e.png') }}" alt="">
+                    <img src="{{ asset('assets/images/508eb78a1ac6ca081729ffd6b984c99e.webp') }}" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <section class="find-your-dream-section">
+    <section class="find-your-dream-section" id="properties">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-12" style="border-left: 18px solid #fb5000;">

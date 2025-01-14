@@ -4,7 +4,7 @@
             <div class="col-md-12 text-center">
                 <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                     <a href="{{ route('coming-soon') }}">
-                        <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.png') }}" alt="">
+                        <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.webp') }}" alt="">
                     </a>
                 </div>
             </div>

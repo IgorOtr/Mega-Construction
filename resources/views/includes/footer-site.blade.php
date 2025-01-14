@@ -3,11 +3,11 @@
         <div class="row">
 
             <div class="col-md-4 text-center logo-and-social-column">
-                <a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo Mega_Contractor-02.png') }}"
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/images/Logo Mega_Contractor-02.webp') }}"
                         alt=""></a>
                 <ul class="d-flex">
                     <li>
-                        <a href="">
+                        <a href="https://www.facebook.com/profile.php?id=61566933914298" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-brand-facebook">
@@ -18,7 +18,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://www.instagram.com/megacontractorsinc/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://www.youtube.com/@MegaContractorsinc" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="currentColor"
                                 class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
@@ -42,7 +42,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://www.linkedin.com/company/mega-contractors/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -69,8 +69,7 @@
                     <li><a href="{{ route('investment') }}">Investment</a></li>
                     <li><a href="{{ route('our-properties') }}">Our Properties</a></li>
                     <li><a href="{{ route('careers') }}">Careers</a></li>
-                    <li><a href="">Estimate</a></li>
-                    <li><a href="">Newsletter</a></li>
+                    <li><a href="#estimate">Estimate</a></li>
                     <li><a href="{{ route('contact-us') }}">Contact</a></li>
                 </ul>
             </div>
@@ -114,10 +113,9 @@
 
         </div>
         <div class="row mt-5">
-            <div class="col-md-10 pt-4 developed-column" style="border-top: 1px solid #efefef">
+            <div class="col-md-12 pt-4 developed-column text-center" style="border-top: 1px solid #efefef">
                 <p>
-                    © 2024 Mega Construction. All Rights Reserved. | Developed by: <a href=""><img
-                            src="{{ asset('assets/images/Adapt ADVERTISING 1.png') }}" alt=""></a>
+                    © 2025 Mega Construction. All Rights Reserved. | Developed by: <a href="https://adaptcrew.com/" target="_blank"><img src="{{ asset('assets/images/Adapt_ADVERTISING.webp') }}" alt=""></a>
                 </p>
                 <buton type="button" class="up-arrow" onclick="toUpSide()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

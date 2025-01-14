@@ -4,8 +4,8 @@
     @include('includes.navbar')
 
     <section class="our-story-section">
-        <img class="our-story-vector" src="{{ asset('assets/images/abou-us-oranger-vector.png') }}" alt="">
-        <img class="group-and-logo-mega" src="{{ asset('assets/images/group-our-story.png') }}" alt="">
+        <img class="our-story-vector" src="{{ asset('assets/images/abou-us-oranger-vector.webp') }}" alt="">
+        <img class="group-and-logo-mega" src="{{ asset('assets/images/group-our-story.webp') }}" alt="">
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-md-6 our-story-col">
@@ -29,7 +29,7 @@
     </section>
 
     <section class="our-missin-vision-section">
-        <img class="our-mission-vision-vector" src="{{ asset('assets/images/Vector 14.png') }}" alt="">
+        <img class="our-mission-vision-vector" src="{{ asset('assets/images/Vector 14.webp') }}" alt="">
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-md-6"></div>
@@ -181,7 +181,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-4 clients-feedback-column">
-                            <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                             <p>
                                 I highly recommend Mega to everyone looking to get into the development market. I've
                                 worked with them before and they have exceeded my expectations every time.
@@ -239,7 +239,7 @@
                         </div>
                         <div class="col-md-4 clients-feedback-column clients-feedback-column-border"
                             style="">
-                            <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                             <p>
                                 Mega worked on my construction project with such attention to detail and expertise that
                                 the final result was flawless. I will work with them in the future and recommend it to
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 clients-feedback-column">
-                            <img src="{{ asset('assets/images/aspas.png') }}" alt="">
+                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
                             <p>
                                 We had the opportunity to work with Mega Contractors in a luxury condo project we
                                 invested in, and all I can say is that it was the right choice. They did an amazing job
@@ -363,20 +363,17 @@
     <section class="find-home-section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 vector-find-home"></div>
+                <div class="col-md-6 vector-find-home">
+                    <img src="{{ asset('assets/images/FIND-HOME.webp') }}" alt="">
+                </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center flex-column form-find-home">
                     <h1>FIND YOUR<br>DREAM HOME</h1>
                     <form action="" class="mt-3">
-
                         <div class="row">
                             <div class="col mb-3">
 
                                 <div class="form-label">STATE</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                         </div>
@@ -385,11 +382,7 @@
                             <div class="col mb-3">
 
                                 <div class="form-label">CITY</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                         </div>
@@ -397,21 +390,13 @@
                             <div class="col mb-3">
 
                                 <div class="form-label">NUMBER OF BEDROOMS</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                             <div class="col mb-3">
 
                                 <div class="form-label">NUMBER OF BATHROOMS</div>
-                                <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="form-control">
 
                             </div>
                         </div>
@@ -420,9 +405,10 @@
 
                                 <div class="form-label">PRICE RANGE</div>
                                 <select class="form-select">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="" selected>Select an option</option>
+                                    <option value="1">$0 - $100.000</option>
+                                    <option value="2">$100.000 - $300.000</option>
+                                    <option value="3">$300.000+</option>
                                 </select>
 
                             </div>
@@ -430,7 +416,7 @@
                         <div class="row">
                             <div class="col mb-3">
 
-                                <button type="submit" class="btn-find-home">SEARCH</button>
+                                <a href="{{ route('our-properties') }}" class="btn-find-home">SEARCH</a>
 
                             </div>
                         </div>
@@ -440,7 +426,7 @@
             </div>
         </div>
     </section>
-
+{{-- 
     <section class="our-partners-section">
         <div class="container">
             <div class="row">
@@ -454,7 +440,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     @include('includes.footer-site')
 </body>

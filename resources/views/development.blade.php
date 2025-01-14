@@ -4,7 +4,7 @@
     @include('includes.navbar')
 
     <section class="constructions-section development-section">
-        <img src="{{ asset('assets/images/Vector-constructions.png') }}" alt="">
+        <img src="{{ asset('assets/images/Vector-constructions.webp') }}" alt="">
         <div class="container-fluid" style="height: 100%;">
             <div class="row" style="height: 100%;">
                 <div class="col-md-6"></div>
@@ -31,29 +31,24 @@
     <section class="featured-projects">
         <div class="container" style="height: 100%;">
             <div class="row" style="height: 100%;">
-                <div class="col-md-4" style="margin-top: -136px;">
+                <div class="col-md-4" style="margin-top: -35px;">
                     <h1 class="mb-4">
-                        Features Projects
+                        Featured Projects
                     </h1>
                     <div class="w-100 text-end">
-                        <img class="fetured-projects-vector" src="{{ asset('assets/images/Vector 7.png') }}"
+                        <img class="featured-projects-vector" src="{{ asset('assets/images/Vector 7.webp') }}"
                             alt="">
                     </div>
 
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-7 margin-negative">
+                <div class="col-md-7">
                     <div class="w-100 text-center mb-3">
-                        <img src="{{ asset('assets/images/female-working-environment-projects.jpg') }}" alt="">
+                        <img src="{{ asset('assets/images/female-working-environment-projects.webp') }}"
+                            alt="">
                     </div>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
+                        Browse through our portfolio to find the home of your dreams. From luxurious designs to residential suburbs, we have high-quality properties available for every style and personality. 
                     </p>
                 </div>
             </div>
@@ -106,7 +101,7 @@
     </section>
 
     <section class="completed-projects completed-projects-development">
-        <img src="{{ asset('assets/images/Vector 3.png') }}" alt="">
+        <img src="{{ asset('assets/images/Vector 3.webp') }}" alt="">
         <h1>Completed<br>Projects</h1>
     </section>
 

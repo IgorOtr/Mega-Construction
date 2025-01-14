@@ -45,7 +45,7 @@
     @endif
 
     <section class="investment-section">
-        <img src="{{ asset('assets/images/Vector 15.png') }}" alt="">
+        <img src="{{ asset('assets/images/Vector 15.webp') }}" alt="">
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-md-6"></div>
