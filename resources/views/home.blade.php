@@ -1,7 +1,6 @@
 @include('includes.head')
 
 <style>
-
     .bg-overlay {
         background-color: #141414cf;
         position: absolute;
@@ -14,6 +13,7 @@
         .form-find-home h1 {
             font-size: 49px;
             text-align: left;
+            width: 90%;
         }
     }
 </style>
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <h1 class="hero-banner__title">Shaping communities.</h1>
-                    <h1 class="hero-banner__title_2">Building futures.</h1>
+                    <h2 class="hero-banner__title_2">Building futures.</h2>
                     <a href="{{ route('our-properties') }}" class="btn-hero">Find Your Dream Home</a>
                 </div>
                 <div class="col-md-3">
@@ -82,12 +82,12 @@
 
     <section class="separator"></section>
 
-    <section class="about-us-section">
+    <section class="about-us-section" id="main-content">
         <div class="container-fluid">
             <div class="row about-us-row">
                 <div class="col-md-6 about-us-column">
                     <div>
-                        <h1>About Us</h1>
+                        <h2>About Us</h2>
                         <p>
                             Mega Contractors has been building a legacy in the construction industry by accumulating
                             more than 18 years of experience throughout the hundreds of well-executed projects the
@@ -110,7 +110,9 @@
                     </div>
                 </div>
                 <div class="col-md-6 vector-col">
-                    <img class="img-about-us-section" src="{{ asset('assets/images/mask-group.webp') }}" alt="">
+                    <img width="605" class="img-about-us-section"
+                        src="{{ asset('assets/images/new/AD200095.webp') }}"
+                        alt="A smiling man in a checkered shirt standing in front of a construction site with an orange border accentuating the image.">
                 </div>
             </div>
         </div>
@@ -118,7 +120,7 @@
 
     <section class="topics-section">
 
-        <div class="container">
+        <div class="container topic-container">
             <div class="row">
 
                 <div class="owl-carousel owl-theme owl-loaded owl-drag">
@@ -129,7 +131,7 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1>General Contractor</h1>
+                                            <h3>General Contractor</h3>
                                             <div class="line-separator w-100"></div>
                                             <p>
                                                 As a general contractor, we oversee all aspects of construction,
@@ -138,10 +140,12 @@
                                         </div>
                                         <div class="ct-body">
                                             <img style="width: 100%"
-                                                src="{{ asset('assets/images/drawing-project.webp') }}" alt="">
+                                                src="{{ asset('assets/images/new/AD202267.webp') }}"
+                                                alt="A woman wearing a safety helmet and high-visibility jacket, writing on a notepad at a construction site during daylight.">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with
+                                                us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +154,7 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1>ARCHITECTuRE & DESIGN</h1>
+                                            <h3>ARCHITECTuRE & DESIGN</h3>
                                             <div class="line-separator w-100"></div>
                                             <p>
                                                 Our architectural and design solutions are tailored to meet our clients'
@@ -159,11 +163,13 @@
                                             </p>
                                         </div>
                                         <div class="ct-body">
-                                            <img style="width: 100%;" src="{{ asset('assets/images/architeture.webp') }}"
-                                                alt="">
+                                            <img style="width: 100%;"
+                                                src="{{ asset('assets/images/new/AD200180.webp') }}"
+                                                alt="View from above of construction workers assembling a staircase in a modern home, with tools and materials scattered around.">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with
+                                                us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -172,18 +178,21 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1>CONSTRUCTION MANAGEMENT</h1>
+                                            <h3>CONSTRUCTION MANAGEMENT</h3>
                                             <div class="line-separator w-100"></div>
                                             <p>
-                                                We have the expertise needed in managing construction projects to ensure our quality standards are met.
+                                                We have the expertise needed in managing construction projects to ensure
+                                                our quality standards are met.
                                             </p>
                                         </div>
                                         <div class="ct-body">
-                                            <img style="width: 100%" src="{{ asset('assets/images/contruction.webp') }}"
-                                                alt="">
+                                            <img style="width: 100%"
+                                                src="{{ asset('assets/images/new/AD200232.webp') }}"
+                                                alt="Modern home with sleek black exterior, large windows, and glass railing, surrounded by a landscaped yard and trees.">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('contact-us') }}" class="btn-topics">Get in touch with
+                                                us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -192,18 +201,21 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1 style="margin-top: 32px;">Development</h1>
+                                            <h3 style="margin-top: 32px;">Development</h3>
                                             <div class="line-separator w-100"></div>
                                             <p>
-                                                We work with a wide range of businesses to develop quality projects that help shape communities.
+                                                We work with a wide range of businesses to develop quality projects that
+                                                help shape communities.
                                             </p>
                                         </div>
                                         <div class="ct-body">
                                             <img style="width: 100%;"
-                                                src="{{ asset('assets/images/development.webp') }}" alt="">
+                                                src="{{ asset('assets/images/new/AD200569.webp') }}"
+                                                alt="A row of modern apartment buildings with balconies, stone accents, and well-maintained surroundings, viewed from the street.">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="{{ route('development') }}" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('development') }}" class="btn-topics">Get in touch with
+                                                us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -212,18 +224,21 @@
                                 <div class="item">
                                     <div class="card-topics text-center">
                                         <div class="ct-head">
-                                            <h1 style="margin-top: 32px;">Investment</h1>
+                                            <h3 style="margin-top: 32px;">Investment</h3>
                                             <div class="line-separator w-100"></div>
                                             <p>
-                                                Our investment solutions are suited to meet our clients' needs, focused on delivering high-quality projects.
+                                                Our investment solutions are suited to meet our clients' needs, focused
+                                                on delivering high-quality projects.
                                             </p>
                                         </div>
                                         <div class="ct-body">
                                             <img style="width: 100%;"
-                                                src="{{ asset('assets/images/investment.webp') }}" alt="">
+                                                src="{{ asset('assets/images/new/AD200078.webp') }}"
+                                                alt="A modern two-story home under construction, featuring large glass windows and a stone façade, with a gravel driveway leading up to the property, surrounded by an expansive lawn and scenic views.">
                                         </div>
                                         <div class="ct-footer">
-                                            <a href="{{ route('investment') }}" class="btn-topics">Get in touch with us</a>
+                                            <a href="{{ route('investment') }}" class="btn-topics">Get in touch with
+                                                us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -231,75 +246,15 @@
                         </div>
                     </div>
                     <div class="owl-nav d-none">
-                        <button type="button" role="presentation" class="owl-prev disabled">
+                        <button type="button" role="presentation" class="owl-prev disabled"
+                            aria-label="Return to previous topic">
                             <span aria-label="Previous">‹</span>
                         </button>
-                        <button type="button" role="presentation" class="owl-next">
+                        <button type="button" role="presentation" class="owl-next" aria-label="Go to next topic">
                             <span aria-label="Next">›</span>
                         </button>
                     </div>
                 </div>
-
-                {{-- <div class="col-md-4 tex-center mb-4">
-                    <div class="card-topics text-center">
-                        <div class="ct-head">
-                            <h1>General Contractor</h1>
-                            <div class="line-separator w-100"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis rerum aut
-                                aliquid fugit praesentium est eum atque quisquam eos?
-                            </p>
-                        </div>
-                        <div class="ct-body">
-                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.webp') }}"
-                                alt="">
-                        </div>
-                        <div class="ct-footer">
-                            <a href="" class="btn-topics">Get in touch with us</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 tex-center mb-4">
-                    <div class="card-topics text-center">
-                        <div class="ct-head">
-                            <h1>General Contractor</h1>
-                            <div class="line-separator w-100"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis rerum aut
-                                aliquid fugit praesentium est eum atque quisquam eos?
-                            </p>
-                        </div>
-                        <div class="ct-body">
-                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.webp') }}"
-                                alt="">
-                        </div>
-                        <div class="ct-footer">
-                            <a href="" class="btn-topics">Get in touch with us</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 tex-center mb-4">
-                    <div class="card-topics text-center">
-                        <div class="ct-head">
-                            <h1>General Contractor</h1>
-                            <div class="line-separator w-100"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis rerum aut
-                                aliquid fugit praesentium est eum atque quisquam eos?
-                            </p>
-                        </div>
-                        <div class="ct-body">
-                            <img style="width: 100%" src="{{ asset('assets/images/drawing-project.webp') }}"
-                                alt="">
-                        </div>
-                        <div class="ct-footer">
-                            <a href="" class="btn-topics">Get in touch with us</a>
-                        </div>
-                    </div>
-                </div> --}}
-
             </div>
         </div>
     </section>
@@ -308,18 +263,20 @@
 
     <section class="find-home-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 vector-find-home">
-                    <img src="{{ asset('assets/images/FIND-HOME.webp') }}" alt="">
+            <div class="row find-row">
+                <div class="col-md-6 find-col vector-find-home">
+                    <img src="{{ asset('assets/images/FIND-HOME.webp') }}"
+                        alt="A joyful couple embracing in their new home, with the woman holding a set of keys featuring a house-shaped keychain, symbolizing the excitement of moving into a new place.">
                 </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center flex-column form-find-home">
-                    <h1>FIND YOUR<br>DREAM HOME</h1>
+                <div
+                    class="col-md-6 find-col d-flex align-items-center justify-content-center flex-column form-find-home">
+                    <h3>FIND YOUR<br>DREAM HOME</h3>
                     <form action="" class="mt-3">
                         <div class="row">
                             <div class="col mb-3">
 
-                                <div class="form-label">STATE</div>
-                                <input type="text" class="form-control">
+                                <label for="state" class="form-label">STATE</label>
+                                <input id="state" type="text" class="form-control">
 
                             </div>
                         </div>
@@ -327,29 +284,29 @@
                         <div class="row">
                             <div class="col mb-3">
 
-                                <div class="form-label">CITY</div>
-                                <input type="text" class="form-control">
+                                <label for="city" class="form-label">CITY</label>
+                                <input id="city" type="text" class="form-control">
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
 
-                                <div class="form-label">NUMBER OF BEDROOMS</div>
-                                <input type="text" class="form-control">
+                                <label for="number_of_bedrooms" class="form-label">NUMBER OF BEDROOMS</label>
+                                <input id="number_of_bedrooms" type="text" class="form-control">
 
                             </div>
                             <div class="col mb-3">
 
-                                <div class="form-label">NUMBER OF BATHROOMS</div>
-                                <input type="text" class="form-control">
+                                <label for="number_of_bathrooms" class="form-label">NUMBER OF BATHROOMS</label>
+                                <input id="number_of_bathrooms" type="text" class="form-control">
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
 
-                                <div class="form-label">PRICE RANGE</div>
+                                <label class="form-label">PRICE RANGE</label>
                                 <select class="form-select">
                                     <option value="" selected>Select an option</option>
                                     <option value="1">$0 - $100.000</option>
@@ -362,7 +319,8 @@
                         <div class="row">
                             <div class="col mb-3">
 
-                                <a href="{{ route('our-properties') }}" class="btn-find-home">SEARCH</a>
+                                <a href="{{ route('our-properties') }}" aria-label="Go To Our Properties Home"
+                                    class="btn-find-home">SEARCH</a>
 
                             </div>
                         </div>
@@ -377,95 +335,111 @@
         <div id="carousel-indicators-dot" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="carousel">
             <div class="carousel-indicators carousel-indicators-dot">
                 <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="0" class="active"
-                    aria-current="true"></button>
-                <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="1"
-                    class=""></button>
-                <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="2"
-                    class=""></button>
-                <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="3"
-                    class=""></button>
+                    aria-current="true" aria-label="Go To First Picture"></button>
+                <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="1" class=""
+                    aria-label="Go To Second Picture"></button>
+                <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="2" class=""
+                    aria-label="Go To Third Picture"></button>
+                <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="3" class=""
+                    aria-label="Go To Fourth Picture"></button>
             </div>
             <div class="carousel-inner h-100">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/analog-landscape-city-with-buildings.webp') }}">
+                    <img class="d-block w-100 owl-images"
+                        alt="A modern house with clean lines and large windows, surrounded by vibrant autumn trees and greenery in the foreground."
+                        src="{{ asset('assets/images/new/AD200238.webp') }}">
+                </div>
+                <div class="carousel-item ">
+                    <img class="d-block w-100 owl-images"
+                        alt="A modern house under construction, surrounded by lush greenery and autumn-colored trees, with workers actively completing the facade and entryway details."
+                        src="{{ asset('assets/images/new/AD200124.webp') }}">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/3d-house-model-with-modern-architecture.webp') }}">
+                    <img class="d-block w-100 owl-images"
+                        alt="A modern apartment building with gray siding and white trim, surrounded by trees and parked cars in the foreground."
+                        src="{{ asset('assets/images/new/AD202603.webp') }}">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/3d-rendering-house-model (1).webp') }}">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" alt=""
-                        src="{{ asset('assets/images/house-is-listed-1-5-million.webp') }}">
+                    <img class="d-block w-100 owl-images"
+                        alt="An aerial view of a modern apartment complex surrounded by dense autumnal woods and a serene pond, showcasing organized parking lots and well-maintained pathways connecting the buildings."
+                        src="{{ asset('assets/images/new/DJI_20241118165302_0775_D.webp') }}">
                 </div>
             </div>
         </div>
     </section>
 
     <section class="get-an-estimate-section" id="estimate">
-        <img class="get-an-estimate-vector" src="{{ asset('assets/images/Vector-8.webp') }}" alt="">
+        <img class="get-an-estimate-vector" src="{{ asset('assets/images/Vector-8.webp') }}" alt="image-vector">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 get-an-estimate-form">
-                    <h1>GET AN<br>ESTIMATE</h1>
+                    <h3>GET AN<br>ESTIMATE</h1>
 
-                    <form action="{{ route('send-get-an-estimate') }}" method="POST" class="mt-3">
-                        @csrf
-                        <div class="row">
-                            <div class="col mb-3">
-                                <div class="form-label">NAME</div>
-                                <input type="text" class="form-control" name="name">
+                        <form action="{{ route('send-get-an-estimate') }}" method="POST" class="mt-3"
+                            id="get-an-estimate-form">
+                            @csrf
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <label for="name" class="form-label">NAME</label>
+                                    <input id="name" type="text" class="form-control" name="name"
+                                        required>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col mb-3">
+                            <div class="row">
+                                <div class="col mb-3">
 
-                                <div class="form-label">EMAIL</div>
-                                <input type="text" class="form-control" name="email">
+                                    <label for="email" class="form-label">EMAIL</label>
+                                    <input id="email" type="text" class="form-control" name="email"
+                                        required>
 
+                                </div>
+                                <div class="col mb-3">
+
+                                    <label for="phone" class="form-label">PHONE</label>
+                                    <input id="phone" type="text" class="form-control" name="phone"
+                                        required>
+
+                                </div>
                             </div>
-                            <div class="col mb-3">
+                            <div class="row">
+                                <div class="col mb-3">
 
-                                <div class="form-label">PHONE</div>
-                                <input type="text" class="form-control" name="phone">
+                                    <label for="city-get-estimate" class="form-label">CITY</label>
+                                    <input id="city-get-estimate" type="text" class="form-control" name="city"
+                                        required>
 
+                                </div>
+                                <div class="col mb-3">
+
+                                    <label for="subject" class="form-label">SUBJECT</label>
+                                    <input id="subject" type="text" class="form-control" name="subject"
+                                        required>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
+                            <div class="row">
+                                <div class="col mb-3">
 
-                                <div class="form-label">CITY</div>
-                                <input type="text" class="form-control" name="city">
+                                    <label for="your-message" class="form-label">YOUR MESSAGE</label>
+                                    <textarea id="your-message" class="form-control" name="message" rows="6"></textarea>
 
+                                </div>
                             </div>
-                            <div class="col mb-3">
 
-                                <div class="form-label">SUBJECT</div>
-                                <input type="text" class="form-control" name="subject">
-
+                            <div class="row mb-3">
+                                <div class="g-recaptcha" data-sitekey="6LehDsYqAAAAAEvRweNISAz73_Zgyfc2qtqAztpN">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
 
-                                <div class="form-label">YOUR MESSAGE</div>
-                                <textarea class="form-control" name="message" rows="6"></textarea>
+                            <div class="row">
+                                <div class="col mb-3">
 
+                                    <button type="submit" class="btn-find-home">GET AN ESTIMATE</button>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col mb-3">
-
-                                <button type="submit" class="btn-find-home">GET AN ESTIMATE</button>
-
-                            </div>
-                        </div>
-                    </form>
+                        </form>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5 get-an-estimate-testimonial">
@@ -473,25 +447,24 @@
 
                     <div id="carousel-indicators-dot-2"
                         class="carousel slide carousel-fade w-100 carousel-get-an-estimate" data-bs-ride="carousel">
-                        <div class="carousel-indicators carousel-indicators-dot carousel-get-an-estimate-indicators">
+                        <div
+                            class="carousel-indicators carousel-indicators-dot carousel-get-an-estimate-indicators indicators-home">
                             <button type="button" data-bs-target="#carousel-indicators-dot" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#carousel-indicators-dot-2"
-                                data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#carousel-indicators-dot-2"
-                                data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#carousel-indicators-dot-2"
-                                data-bs-slide-to="3"></button>
+                                class="active" aria-label="Go To First Review"></button>
+                            <button type="button" data-bs-target="#carousel-indicators-dot-2" data-bs-slide-to="1"
+                                aria-label="Go To Second Review"></button>
+                            <button type="button" data-bs-target="#carousel-indicators-dot-2" data-bs-slide-to="2"
+                                aria-label="Go To Third Review"></button>
+                            <button type="button" data-bs-target="#carousel-indicators-dot-2" data-bs-slide-to="3"
+                                aria-label="Go To Fourth Review"></button>
                         </div>
                         <div class="carousel-inner w-100">
                             <div class="carousel-item w-100 active">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                                     <p>
-                                        I highly recommend Mega to everyone looking to get into the development market.
-                                        I've worked
-                                        with
-                                        them before and they have exceeded my expectations every time.
+                                        If you're looking for a reliable and talented construction company, look no
+                                        further than Mega. They are the best in the business.
                                     </p>
                                     <div class="name-and-stars-testimonial">
                                         <h2>Michael L.</h2>
@@ -547,12 +520,10 @@
                             </div>
                             <div class="carousel-item w-100">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                                     <p>
-                                        I highly recommend Mega to everyone looking to get into the development market.
-                                        I've worked
-                                        with
-                                        them before and they have exceeded my expectations every time.
+                                        Working with Mega was a pleasure. They are a highly skilled team that
+                                        consistently exceeded my expectations.
                                     </p>
                                     <div class="name-and-stars-testimonial">
                                         <h2>Oliver A.</h2>
@@ -608,12 +579,10 @@
                             </div>
                             <div class="carousel-item w-100">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                                     <p>
-                                        I highly recommend Mega to everyone looking to get into the development market.
-                                        I've worked
-                                        with
-                                        them before and they have exceeded my expectations every time.
+                                        Mega is a fantastic partner for any construction project. They are professional,
+                                        responsive, and always go the extra mile.
                                     </p>
                                     <div class="name-and-stars-testimonial">
                                         <h2>Amelia J.</h2>
@@ -669,12 +638,10 @@
                             </div>
                             <div class="carousel-item w-100">
                                 <div class="">
-                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                                    <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                                     <p>
                                         I highly recommend Mega to everyone looking to get into the development market.
-                                        I've worked
-                                        with
-                                        them before and they have exceeded my expectations every time.
+                                        I've worked with them before and they have exceeded my expectations every time.
                                     </p>
                                     <div class="name-and-stars-testimonial">
                                         <h2>Emma P.</h2>
@@ -736,19 +703,21 @@
     </section>
 
     <section class="art-2">
-        <img class="art-2-vector-orange" src="{{ asset('assets/images/Vector 7.webp') }}" alt="">
-        <img class="art-2-vector-black" src="{{ asset('assets/images/Vector 9.webp') }}" alt="">
+        <div class="dark-background"></div>
+        <img class="art-2-vector-orange" src="{{ asset('assets/images/Vector 7.webp') }}" alt="image-vector">
+        <img class="art-2-vector-black" src="{{ asset('assets/images/Vector 9.webp') }}" alt="image-vector">
 
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h1>
+                <div class="col-md-6 mbl-fix">
+                    <h3>
                         From blueprint to reality
-                    </h1>
+                    </h3>
                     <p>
                         Subscribe to our newsletter to be on the loop about our latest news and projects.
                     </p>
-                    <a class="btn-art-2" href="{{ route('contact-us') }}">SUBSCRIBE NOW</a>
+                    <a class="btn-art-2" href="{{ route('contact-us') }}"
+                        aria-label="Go to Contact Us Page">SUBSCRIBE NOW</a>
                 </div>
                 <div class="col-md-6">
 
@@ -757,7 +726,25 @@
         </div>
     </section>
 
+
     @include('includes.footer-site')
+
+    <script>
+        $(document).ready(function() {
+            $("img:not(.owl-images)").each(function() {
+                if (!$(this).attr("loading")) {
+                    $(this).attr("loading", "lazy");
+                }
+                if (!$(this).attr("width") || !$(this).attr("height")) {
+                    $(this).attr("width", this.width);
+                    $(this).attr("height", this.height);
+                }
+            });
+        });
+    </script>
+
+
+
 </body>
 
 </html>

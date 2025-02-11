@@ -54,4 +54,14 @@ class UserSideController extends Controller
     {
         return view('contact-us');
     }
+
+    public function renderPrivacyPolicyPage() 
+    {
+        return view('privacy-policy');
+    }
+
+    public function renderCookiesPage() 
+    {
+        return view('cookies');
+    }
 }

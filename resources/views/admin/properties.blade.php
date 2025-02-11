@@ -259,7 +259,7 @@
             @if (count($properties) != 0)
 
                 @foreach ($properties as $property)
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">{{ $property->p_title }}</h3>
@@ -301,7 +301,7 @@
                                     </button>
 
                                     {{-- ADICIONAR FOTOS --}}
-                                    <button type="button" data-toggle="tooltip" data-bs-title="Adicionar Imagens"
+                                    {{-- <button type="button" data-toggle="tooltip" data-bs-title="Adicionar Imagens"
                                         class="btn btn-primary text-center btn-action-properties"
                                         data-bs-toggle="modal" data-bs-target="#modal-simple{{ $property->id }}">
 
@@ -318,7 +318,7 @@
                                             <path d="M16 19h6" />
                                             <path d="M19 16v6" />
                                         </svg>
-                                    </button>
+                                    </button> --}}
 
                                     {{-- VER DETALHES --}}
                                     <a href="#" data-toggle="tooltip" data-bs-title="Ver detalhes"
@@ -347,7 +347,7 @@
                                     ">
                                 </div>
                             </div>
-                            <div class="card-footer p-0">
+                            {{-- <div class="card-footer p-0">
                                 <div class="accordion" style="border-radius: 0px 0px 10px 10px;"
                                     id="accordion-example">
                                     <div class="accordion-item">
@@ -409,7 +409,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                         {{-- MODAIS --}}
@@ -608,7 +608,7 @@
                             </div>
                         </div>
 
-                        <div class="modal modal-blur fade" id="modal-simple{{ $property->id }}" tabindex="-1"
+                        {{-- <div class="modal modal-blur fade" id="modal-simple{{ $property->id }}" tabindex="-1"
                             style="display: none;" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <form action="{{ route('properties.addGallery') }}" method="POST"
@@ -637,8 +637,8 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
-
+                        </div> --}}
+                    </div>
                         {{-- FIM MODAIS --}}
                 @endforeach
             @else

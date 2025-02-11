@@ -6,10 +6,11 @@
                 aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <a class="skip-content btn" href="#main-content">Skip Content</a>
             <div class="col-md-4 text-center col-img-nav">
                 <div class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-                    <a href="{{ route('coming-soon') }}">
-                        <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.webp') }}" alt="">
+                    <a href="{{ route('home') }}" aria-label="Go To Home Page">
+                        <img width="120" src="{{ asset('assets/images/Logo Mega_Contractor-03.webp') }}" alt="logo-header">
                     </a>
                 </div>
             </div>

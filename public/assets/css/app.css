@@ -4,6 +4,10 @@
     font-family: Poppins;
 }
 
+html, body { 
+    overflow-x: hidden !important 
+}
+
 body {
     background-color: #ffffff;
 }
@@ -148,8 +152,10 @@ a {
 
 .img-about-us-section {
     position: absolute;
-    top: 119px;
-    right: 170px;
+    top: 89px;
+    right: 130px;
+    object-fit: cover;
+    object-position: 0px -170px;
 }
 
 .about-us-column {
@@ -163,7 +169,7 @@ a {
     width: 60%;
 }
 
-.about-us-column h1 {
+.about-us-column h2 {
     color: #fb5000;
     font-size: 64px;
     font-weight: 700;
@@ -201,11 +207,12 @@ a {
     margin-bottom: 10px;
 }
 
-.ct-head h1 {
+.ct-head h3 {
     color: #fb5000;
     font-size: 35px;
     text-transform: uppercase;
     font-weight: 900;
+    line-height: 40px;
 }
 
 .ct-head p {
@@ -248,7 +255,7 @@ a {
     width: 100%;
 }
 
-.form-find-home h1 {
+.form-find-home h3 {
     width: 50%;
     color: #141414;
     font-size: 60px;
@@ -310,7 +317,7 @@ a {
     position: relative;
 }
 
-.get-an-estimate-section h1 {
+.get-an-estimate-section h3 {
     color: #ffffff;
     font-size: 69px;
     font-weight: 800;
@@ -412,7 +419,7 @@ a {
     left: 827px;
 }
 
-.art-2 h1 {
+.art-2 h3 {
     font-size: 110.12px;
     font-weight: 900;
     line-height: 105.71px;
@@ -536,7 +543,7 @@ a {
     background-image: url(../images/327f6684f29e5672e11d63e0f5c43227.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 122%;
     width: 100%;
     background-position: center center;
 }
@@ -616,7 +623,7 @@ form,
 }
 
 .constructions-section {
-    background-image: url(../images/0b9f91c3d7cfa9909b86096c065e4fbf.webp);
+    background-image: url(../images/new/DJI_20241118165302_0775_D.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -672,7 +679,7 @@ form,
 
 .featured-projects {
     background-color: #ffffff;
-    height: 850px;
+    height: 650px;
     margin-bottom: -40px;
 }
 
@@ -684,7 +691,7 @@ form,
     flex-direction: column;
 }
 
-.featured-projects h1 {
+.featured-projects h3 {
     color: #141414;
     font-size: 64px;
     font-weight: 700;
@@ -702,10 +709,6 @@ form,
 
 .completed-projects { 
     position: relative;
-    background-image: url(../images/4c69e372208d3b54dd05fa76a9306aa6.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     height: 900px;
 }
 
@@ -726,7 +729,7 @@ left: 937px;
 }
 
 .investment-section {
-  background-image: url(../images/analog-landscape-city-with-buildings.webp);
+  background-image: url(../images/new/AD200576.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 1100px;
@@ -818,8 +821,7 @@ left: 937px;
     width: 100%;
 
 }
-
-.help-us-section h1 {
+.help-us-section h3 {
     color: #141414;
     font-size: 60px;
     font-weight: 700;
@@ -836,7 +838,7 @@ left: 937px;
     background-image: url(../images/bdd748a92e4dbf62e8d8e565255e3c2a.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1120px;
+    height: 103%;
 }
 
 .careers-section h1,
@@ -856,10 +858,10 @@ form,
 }
 
 .development-section {
-    background-image: url(../images/eeee9d53524431f14a74f15277ad87af.webp) !important;
+    background-image: url(../images/new/AD200569.jpg) !important;
     background-size: cover;
-    background-position-x: -480px;
-    background-position-y: -220px;
+    background-position-x: -220px;
+    background-position-y: -550px;
 }
 
 .completed-projects-development {
@@ -875,7 +877,7 @@ form,
     padding-bottom: 80px;
 }
 
-.find-your-dream-section h1 {
+.find-your-dream-section h3 {
     color: #141414;
     font-size: 67.68px;
     font-weight: 700;
@@ -1022,7 +1024,7 @@ form,
 .group-and-logo-mega {
     position: absolute;
     z-index: 2;
-    top: 42px;
+    top: 36px;
     right: 194px;
     width: 700px;
 }
@@ -1084,7 +1086,7 @@ form,
     width: 60%;
 }
 
-.our-values-text h1{
+.our-values-text h2{
     color: #ffffff;
     font-size: 40px;
     font-weight: 700;
@@ -1134,7 +1136,7 @@ form,
 }
 
 .usa-flag-bg {
-    background-image: url(../images/d7591e15089aaf7928bd013e01925ec4.webp);
+    background-image: url(../images/new/DJI_20241118170630_0810_D.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1151,7 +1153,7 @@ form,
 }
 
 
-.our-legacy-column h1 {
+.our-legacy-column h3 {
     color: #141414;
     font-size: 40px;
     font-weight: 700;
@@ -1234,13 +1236,17 @@ form,
 }
 
 .our-properties-banner {
-    background-image: url(../images/f5e9d2f1be532c54d7a4f50587203180.webp);
+    background-image: url(../images/new/DJI_20241118170630_0810_D.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -470px;
+    background-position-y: -250px;
     height: 550px;
     position: relative;
     border-bottom: 15px solid #fb5000;
+}
+
+.search-text-column {
+    padding-left: 40px;
 }
 
 .search-text-column h1 {
@@ -1550,6 +1556,261 @@ form,
     object-fit: cover;
 }
 
+.link-column, .office-column h4 {
+    color: #141414;
+}
+
+.completed-projects-carousel {
+    position: relative;
+}
+
+.photo-gallery-section .vector-completed-projects {
+    position: absolute;
+    left: 827px;
+    z-index: 999999999999999;
+    top: 0px;
+}
+
+.photo-gallery-section  h3 {
+    position: absolute;
+    top: 70px;
+    text-align: right;
+    font-size: 64px;
+    color: #141414;
+    font-weight: 700;
+    line-height: 71.04px;
+    left: 937px;
+    z-index: 999999999999999;
+
+}
+
+.col-image img {
+    height: 590px;
+    object-fit: cover;
+}
+
+#lampada{
+    margin-left: -35px;
+}
+
+.skip-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #141414;
+    width: 120px;
+    background-color: #fb5000;
+    opacity: 0;
+}
+
+.skip-content:hover {
+    background-color: #fb5000;
+    color: #14141460;
+}
+
+.skip-content:focus {
+    background-color: #fb5000;
+    color: #141414;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1440px) {
+    #myVideo {
+        height: 580px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .container-hero-banner {
+        top: 250px;
+        left: 135px;
+    }
+
+    .vector-col {
+        padding: 335px;
+    }
+    
+    .about-us-section {
+        margin-top: 0px;
+    }
+
+    .about-us-column div {
+        margin-top: 65px;
+    }
+
+    .img-about-us-section {
+        right: 140px;
+    }
+    .owl-carousel .owl-nav button.owl-prev {
+        left: -75px;
+    }
+    .owl-carousel .owl-nav button.owl-next {
+        right: -75px;
+    }
+    .art-1 {
+        height: 690px;
+    }
+    .find-home-section{
+        height: 630px;
+    }
+    .find-home-section .container-fluid, .find-row, .find-col {
+        height: 100% !important;
+    }
+
+    .form-find-home h1 {
+        font-size: 45px;
+        margin-bottom: 0px;
+    }
+    .form-find-home {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .get-an-estimate-testimonial h2 {
+        font-size: 17px;
+    }
+
+    .name-and-stars-testimonial .icon {
+        width: 19px;
+    }
+    .carousel-get-an-estimate-indicators {
+        left: -162px;
+    }
+
+    .art-2 {
+        height: 730px;
+    }
+
+    .art-2 h1 {
+        font-size: 60px;
+        line-height: 55.71px;
+    }
+
+    .art-2 p {
+        font-size: 40px;
+    }
+    
+    .art-2-vector-orange {
+        width: 220px;
+    }
+
+    .our-story-vector {
+        width: 760px;
+    }
+
+    .group-and-logo-mega {
+        top: 54px;
+        right: 154px;
+        width: 566px;
+    }
+
+    .our-mission-vision-vector {
+        width: 607px;
+    }
+
+    .our-story-section {
+        height: 700px;
+    }
+
+    .our-missin-vision-section {
+        height: 520px;
+        margin-top: -70px;
+    }
+
+    .value-box img {
+        margin-bottom: 20px;
+        height: 100px;
+    }
+
+    .our-legacy-section {
+        height: 1010px;
+    }
+
+    .our-legacy-column h1 {
+        font-size: 35px;
+    }
+
+    .client-name-stars h3 {
+        font-size: 19px;
+        margin: 0px;
+    }
+    .client-name-stars .icon {
+        width: 19px;
+    }
+
+    .constructions-section img {
+        width: 727px;
+    }
+
+    .constructions-section {
+        height: 691px;
+    }
+
+    .completed-projects img {
+        left: 587px;
+        width: 430px;
+    }
+
+    .completed-projects h1 {
+        top: 60px;
+        font-size: 58px;
+        line-height: 55px;
+        left: 647px;
+    }
+
+    .featured-projects {
+        height: 700px;
+    }
+
+    .featured-projects h1 {
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    .featured-projects .w-100 {
+        text-align: start !important;
+    }
+
+    .investment-section img {
+        width: 710px;
+        height: 1000px;
+    }
+
+    .investment-section {
+        height: 994px;
+    }
+
+    .our-properties-banner {
+        height: 455px;
+    }
+
+    .careers-section {
+        height: 100%;
+    }
+
+    .form-contact-us-column {
+        padding-top: 30px;
+    }
+
+    .contact-us-section {
+        height: 126%;
+    }
+
+    .container-mb-about-us {
+        margin-top: 40px !important;
+    }
+
+}
+
+
+@media screen and (max-width: 1080px) {
+
+}
+
 @media screen and (max-width: 768px) {
 
     #myVideo {
@@ -1617,10 +1878,16 @@ form,
     }
     .our-story-vector {
         top: 600px;
+        display: none;
+    }
+    .empty-col-mb {
+        display: none;
     }
 
     .group-and-logo-mega {
-        display: none;
+        position: relative;
+        top: 0px;
+        right: 0px;
     }
 
 
@@ -1658,11 +1925,13 @@ form,
 
     .our-values-section {
         height: 2035px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 
     .our-legacy-section {
         padding-top: 80px;
-        height: 1790px;
+        height: 1605px;
     }
 
     .our-legacy-column div {
@@ -1675,18 +1944,20 @@ form,
     }
 
     .clients-feedback-section {
-        padding: 80px 20px; 
+        padding: 40px 20px; 
         height: 1700px;
     }
 
     .clients-feedback-column {
         position: relative;
-        padding: 40px 0px;
+        padding: 0px 0px 80px 0px;
+        text-align: center;
     }
 
     .clients-feedback-column p {
         font-size: 20px;
         text-align: justify;
+        text-align: center;
     }
 
     .clients-feedback-column-border {
@@ -1789,6 +2060,7 @@ form,
     .investment-section img {
         top: 531px;
         height: 570px;
+        display: none;
     }
 
     .help-us-section h1 {
@@ -1850,6 +2122,7 @@ form,
 
     .col-image img {
         margin-bottom: 40px;
+        height: 400px;
     }
 
     .search-text-column h1 {
@@ -1946,7 +2219,7 @@ form,
     }
 
     .about-us-section {
-        margin-top: -40px;
+        margin-top: 50px;
     }
 
     .about-us-column div {
@@ -1960,12 +2233,15 @@ form,
 
     .vector-col {
         padding: 195px;
+        background: none;
     }
 
     .img-about-us-section {
-        top: 36px;
-        right: 36px;
-        width: 316px;
+        top: -50px;
+        right: 0%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0px -123px;
     }
 
     .about-us-column {
@@ -1978,7 +2254,7 @@ form,
     }
 
     .topics-section {
-        height: 870px;
+        height: 810px;
     }
 
     .btn-about-us {
@@ -2010,7 +2286,7 @@ form,
     .get-an-estimate-vector {
         right: 0px;
         top: 0px;
-        width: 120px;
+        width: 150px;
     }
 
     .get-an-estimate-testimonial {
@@ -2037,7 +2313,7 @@ form,
     }
 
     .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
-        top: 625px;
+        top: 638px;
     }
     
     .owl-carousel .owl-nav button.owl-prev {
@@ -2049,7 +2325,8 @@ form,
     }
 
     .carousel-get-an-estimate-indicators {
-        left: -72px;
+        left: -57px;
+        bottom: -40px;
     }
 
     .name-and-stars-testimonial {
@@ -2076,7 +2353,7 @@ form,
         top: 30px;
         font-size: 39px;
         line-height: 40px;
-        right: 15px;
+        left: 135px;
     }
 
     .get-an-estimate-testimonial div p {
@@ -2091,5 +2368,226 @@ form,
         width: 100%;
         text-align: center;
     }
+
+    .logo-footer {
+        width: 340px;
+    }
+
+    .mbl-fix {
+        text-align: center;
+    }
+
+    .art-2 {
+        height: 760px;
+    }
+
+    .art-2 p {
+        text-align: center;
+    }
+
+    .mbl-fix h1 {
+        text-align: center;
+    }
+
+    .our-legacy-column h1 {
+        font-size: 38px;
+    }
+
+    .form-find-home h1 {
+        width: 90%;
+    }
+
+    .clients-feedback-title {
+        text-align: center;
+    }
+
+    .client-name-stars h3{
+        text-align: center;
+    }
+
+    .client-name-stars .col-6 {
+        justify-content: center;
+    }
+
+    .find-your-dream-section h2 {
+        font-size: 36px;
+    }
+
+    .find-your-dream-section h1 {
+        font-size: 60px;
+    }
+
+    .empty-col {
+        display: none;
+    }
+
+    .investment-presentation-form .investment-presentation-subtitle {
+        text-align: center;
+    }
+
+    .investment-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .indicators-home {
+        left: -60px !important;
+    }
+
+    .development-section {
+        background-position-x: -30px;
+        background-position-y: -240px;
+    }
+
+    .dark-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000085;
+    }
+
+    .art-2 {
+        background-position-x: -800px;
+    }
+
+    .art-2 .container {
+        position: relative;
+        z-index: 10000000000000000000;
+    }
+
+    .art-2 p {
+        color: #ffffff;
+    }
+
+    .container-mb-about-us {
+        height: auto !important;
+        margin-top: 40px !important;
+    }
+
+    .our-story-section {
+        height: 996px;
+    }
+
+    .topic-container {
+        margin-top: -80px;
+    }
+
+    .our-values-icons {
+        margin-top: -110px;
+    }
+
+    .find-your-dream-section {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .photo-gallery-section .vector-completed-projects {
+        left: 156px;
+        width: 200px;
+    }
+    
+    .photo-gallery-section h1 {
+        top: 30px;
+        font-size: 24px;
+        line-height: 20px;
+        left: 193px;
+    }
+
+    #lampada{
+        margin-left: 0px;
+    }
+
+    .search-text-column {
+        padding-left: 0px;
+    }
+    
 }
+
+@media screen and (max-width: 530px) {
+    .art-2 h3 {
+        font-size: 92px;
+    }
+    .indicators-home {
+        left: -75px !important;
+    }
+    .get-an-estimate-section {
+        height: 1320px;
+    }
+    .find-home-section {
+        height: 750px;
+    }
+
+    .form-find-home h3 {
+        width: 90%;
+        text-align: center;
+    }
+
+    .about-us-section {
+        margin-top: 210px !important;
+    }
+
+    .img-about-us-section {
+        top: -210px !important;
+    }
+
+    .topics-section {
+        height: 900px !important;
+    }
+
+    .photo-gallery-section h3 {
+        top: 17px;
+        font-size: 24px;
+        line-height: 31.04px;
+        left: 185px;
+    }
+
+    .featured-projects h3 {
+        text-align: center;
+    }
+
+    .search-text-column {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+        top: 658px;
+    }
+
+    .art-2 {
+        height: 810px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .art-2 {
+        background-position-x: -920px;
+        height: 870px;
+    }
+    .art-2 h3 {
+        font-size: 72px;
+    }
+
+    .indicators-home {
+        left: -59px !important;
+    }
+
+    .img-about-us-section {
+        top: -60px !important;
+    }
+
+    .about-us-section {
+        margin-top: 60px !important;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+        top: 678px;
+    }
+}
+
+
+
+
 

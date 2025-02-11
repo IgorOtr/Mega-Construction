@@ -4,9 +4,9 @@
     @include('includes.navbar')
 
     <section class="our-story-section">
-        <img class="our-story-vector" src="{{ asset('assets/images/abou-us-oranger-vector.webp') }}" alt="">
-        <img class="group-and-logo-mega" src="{{ asset('assets/images/group-our-story.webp') }}" alt="">
-        <div class="container-fluid h-100">
+        <img class="our-story-vector" src="{{ asset('assets/images/abou-us-oranger-vector.webp') }}" alt="vector image">
+        <img class="group-and-logo-mega" src="{{ asset('assets/images/new/AD200253.webp') }}" alt="A confident man dressed in a dark blazer and light pants stands in front of a modern house, with autumnal trees in the background.">
+        <div class="container-fluid h-100 container-mb-about-us">
             <div class="row h-100">
                 <div class="col-md-6 our-story-col">
                     <div>
@@ -20,16 +20,16 @@
                             entire condos, Mega Contractors has been shaping communities and leaving its mark across the
                             country.
                         </p>
-                        <a href="{{ route('contact-us') }}" class="btn-our-story">CONTACT US</a>
+                        <a href="{{ route('contact-us') }}" aria-label="Go To Contact Page" class="btn-our-story">CONTACT US</a>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6 empty-col-mb"></div>
             </div>
         </div>
     </section>
 
     <section class="our-missin-vision-section">
-        <img class="our-mission-vision-vector" src="{{ asset('assets/images/Vector 14.webp') }}" alt="">
+        <img class="our-mission-vision-vector" src="{{ asset('assets/images/Vector 14.webp') }}" alt="vector image">
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-md-6"></div>
@@ -60,7 +60,7 @@
             <div class="row h-100">
                 <div class="col-md-6 our-values-text">
                     <div>
-                        <h1>OUR VALUES</h1>
+                        <h2>OUR VALUES</h2>
                         <p>
                             Whether embarking on a new residential venture, seeking a luxurious living space, or needing
                             a reliable general contractor, Mega Contractors is your trusted partner. We are dedicated to
@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="col-md-4 mb-4 text-center">
                             <div class="value-box">
-                                <img src="{{ asset('assets/images/icons/melhor-pratica 1.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icons/melhor-pratica 1.svg') }}" alt="Excellence icon">
                                 <h3>Excellence</h3>
                                 <p>
                                     We are committed to delivering the highest quality in every aspect of our work.
@@ -81,7 +81,7 @@
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="value-box">
-                                <img src="{{ asset('assets/images/icons/aperto-de-mao 1.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icons/aperto-de-mao 1.svg') }}" alt="Integrity icon">
                                 <h3>Integrity</h3>
                                 <p>
                                     We conduct our business with honesty, transparency, and respect.
@@ -90,7 +90,7 @@
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="value-box">
-                                <img src="{{ asset('assets/images/icons/inovacao 1.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icons/inovacao 1.svg') }}" alt="Innovation icon">
                                 <h3>Innovation</h3>
                                 <p>
                                     We embrace new ideas and technologies to provide cutting-edge solutions.
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="value-box">
-                                <img src="{{ asset('assets/images/icons/foco 1.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icons/foco 1.svg') }}" alt="Client Focus Icon">
                                 <h3>Client Focus</h3>
                                 <p>
                                     We prioritize our clients' needs and work diligently to exceed their expectations.
@@ -108,7 +108,7 @@
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="value-box">
-                                <img src="{{ asset('assets/images/icons/comunidade 1.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icons/comunidade 1.svg') }}" alt="Community Icon">
                                 <h3>Community</h3>
                                 <p>
                                     We contribute positively to the communities where we build, enhancing the quality of
@@ -118,7 +118,7 @@
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="value-box">
-                                <img src="{{ asset('assets/images/icons/networking 1.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icons/networking 1.svg') }}" alt="Teamwork Icon">
                                 <h3>Teamwork</h3>
                                 <p>
                                     We believe in the power of collaboration and foster a culture of mutual support and
@@ -137,14 +137,14 @@
             <div class="row h-100">
                 <div class="col-md-6 our-legacy-column">
                     <div>
-                        <h1>OUR LEGACY</h1>
+                        <h3>OUR LEGACY</h3>
                         <p>
                             Mega Contractors has been building a legacy in the construction industry for over two
                             decades, delivering thousands of well-executed projects across the East Coast. Our CEO, JP
                             Miranda, brings extensive experience across a wide range of commercial and residential
                             projects, including single-family homes, condos, apartment complexes, and luxury residences.
                         </p>
-                        <h1>OUR EXPERTISE</h1>
+                        <h3>OUR EXPERTISE</h3>
                         <p>
                             Mega Contractors is a single-owner construction company with 200 direct and indirect
                             employees. We are solutions-oriented, always prioritizing our clients' needs to ensure that
@@ -152,14 +152,14 @@
                             developing multi-unit apartment complexes, we bring a commitment to excellence and
                             innovation to every phase of construction.
                         </p>
-                        <h1>OUR APPROACH</h1>
+                        <h3>OUR APPROACH</h3>
                         <p>
                             We integrate development, design, general construction, construction management, and
                             investment expertise to tailor solutions that meet the unique demands of each project. As
                             both a general contractor and a specialist in concrete and framing, we offer seamless
                             project execution and superior quality.
                         </p>
-                        <h1>OUR COMMITMENT</h1>
+                        <h3>OUR COMMITMENT</h3>
                         <p>
                             Whether embarking on a new residential venture, seeking a luxurious living space, or needing
                             a reliable general contractor, Mega Contractors is your trusted partner. We are dedicated to
@@ -167,7 +167,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 usa-flag-bg"></div>
+                <div class="col-md-6 usa-flag-bg" alt="An aerial view of a modern apartment building surrounded by parking spaces and a scenic landscape of autumn trees and open fields."></div>
             </div>
         </div>
     </section>
@@ -176,12 +176,12 @@
         <div class="container h-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-md-12">
-                    <h1 class="clients-feedback-title">Clients' Feedback</h1>
+                    <h3 class="clients-feedback-title">Clients' Feedback</h3>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-4 clients-feedback-column">
-                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                             <p>
                                 I highly recommend Mega to everyone looking to get into the development market. I've
                                 worked with them before and they have exceeded my expectations every time.
@@ -239,7 +239,7 @@
                         </div>
                         <div class="col-md-4 clients-feedback-column clients-feedback-column-border"
                             style="">
-                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                             <p>
                                 Mega worked on my construction project with such attention to detail and expertise that
                                 the final result was flawless. I will work with them in the future and recommend it to
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 clients-feedback-column">
-                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="">
+                            <img src="{{ asset('assets/images/aspas.webp') }}" alt="quotation marks">
                             <p>
                                 We had the opportunity to work with Mega Contractors in a luxury condo project we
                                 invested in, and all I can say is that it was the right choice. They did an amazing job
@@ -362,12 +362,12 @@
 
     <section class="find-home-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 vector-find-home">
-                    <img src="{{ asset('assets/images/FIND-HOME.webp') }}" alt="">
+            <div class="row find-row">
+                <div class="col-md-6 find-col vector-find-home">
+                    <img src="{{ asset('assets/images/FIND-HOME.webp') }}" alt="A joyful couple embracing in their new home, with the woman holding a set of keys featuring a house-shaped keychain, symbolizing the excitement of moving into a new place.">
                 </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center flex-column form-find-home">
-                    <h1>FIND YOUR<br>DREAM HOME</h1>
+                <div class="col-md-6 find-col d-flex align-items-center justify-content-center flex-column form-find-home">
+                    <h3>FIND YOUR<br>DREAM HOME</h3>
                     <form action="" class="mt-3">
                         <div class="row">
                             <div class="col mb-3">
@@ -416,7 +416,7 @@
                         <div class="row">
                             <div class="col mb-3">
 
-                                <a href="{{ route('our-properties') }}" class="btn-find-home">SEARCH</a>
+                                <a href="{{ route('our-properties') }}" class="btn-find-home" aria-label="Go To Our Properties Page">SEARCH</a>
 
                             </div>
                         </div>

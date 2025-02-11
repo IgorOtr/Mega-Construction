@@ -2,8 +2,12 @@
 
 <style>
     .alert {
-    z-index: 999999999999;
-}
+        z-index: 999999999999;
+    }
+
+    .form-contact-us-column {
+        background-color: #141414;
+    }
 </style>
 
 <body>
@@ -51,7 +55,7 @@
     @endif
 
     <section class="careers-section">
-        <img class="contact-us-vector" src="{{ asset('assets/images/Vector 5.webp') }}" alt="">
+        {{-- <img class="contact-us-vector" src="{{ asset('assets/images/Vector 5.webp') }}" alt=""> --}}
         <div class="container">
             <div class="row">
                 <div class="col-md-6 form-contact-us-column">
@@ -64,7 +68,8 @@
                         Fill out the form below to apply for a position today!
                     </p>
 
-                    <form action="{{ route('send-careers') }}" class="mt-3" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('send-careers') }}" class="mt-3" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col mb-3">
@@ -102,6 +107,9 @@
                                 <textarea class="form-control" name="message" rows="6" required></textarea>
 
                             </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="g-recaptcha" data-sitekey="6LehDsYqAAAAAEvRweNISAz73_Zgyfc2qtqAztpN"></div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">

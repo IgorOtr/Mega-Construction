@@ -108,6 +108,9 @@
 
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <div class="g-recaptcha" data-sitekey="6LehDsYqAAAAAEvRweNISAz73_Zgyfc2qtqAztpN"></div>
+                        </div>
                         <div class="row">
                             <div class="col mb-3">
 

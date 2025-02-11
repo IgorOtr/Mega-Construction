@@ -8,8 +8,8 @@ use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserSideController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/coming-soon', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
-Route::post('/coming-soon', [MailController::class, 'sendContactEmail'])->name('send-email-from-coming-soon');
+// Route::get('/coming-soon', [UserSideController::class, 'renderComingSoonPage'])->name('coming-soon');
+// Route::post('/coming-soon', [MailController::class, 'sendContactEmail'])->name('send-email-from-coming-soon');
 Route::get('/', [UserSideController::class, 'renderHomePage'])->name('home');
 Route::get('/about-us', [UserSideController::class, 'renderAboutUsPage'])->name('about-us');
 Route::get('/development', [UserSideController::class, 'renderDevelopmentPage'])->name('development');
@@ -18,12 +18,15 @@ Route::get('/investment', [UserSideController::class, 'renderInvestmentPage'])->
 Route::get('/our-properties', [UserSideController::class,'renderPropertiesPage'])->name('our-properties');
 Route::get('/careers', [UserSideController::class,'renderCareersPage'])->name('careers');
 Route::get('/contact-us', [UserSideController::class, 'renderContactUsPage'])->name('contact-us');
+Route::get('/privacy-policy', [UserSideController::class, 'renderPrivacyPolicyPage'])->name('privacy-policy');
+Route::get('/cookies', [UserSideController::class, 'renderCookiesPage'])->name('cookies');
 // Route::get('/property-details', [PropertyController::class, 'getPropertyDetails'])->name('property-details');
 
 Route::post('/contact-us', [MailController::class, 'sendContactEmailFromContactForm'])->name('send-contact');
 Route::post('/careers', [MailController::class, 'sendContactEmailFromCareersForm'])->name('send-careers');
 Route::post('/get-an-estimate', [MailController::class, 'sendContactEmailGetAnEstimate'])->name('send-get-an-estimate');
 Route::post('/investment', [MailController::class, 'sendContactEmailFromInvestmentPage'])->name('send-investment');
+Route::post('/cookies', [MailController::class, 'sendContactEmailFromCookiesForm'])->name('send-cookies');
 
 
 

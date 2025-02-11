@@ -25,7 +25,7 @@ class MailController extends Controller
             $mail->Port       = 465;
             $mail->SMTPAuth   = true;
             $mail->Username   = 'sites@adaptcrew.com';
-            $mail->Password   = 'lqll hapi nxef nxrh';
+            $mail->Password   = 'tolj mffm jmqj ahso';
 
             $mail->setFrom('sites@adaptcrew.com', 'Adapt Crew');
             $mail->addAddress('contact@mega-contractors.com');
@@ -66,7 +66,7 @@ class MailController extends Controller
             $mail->Port       = 465;
             $mail->SMTPAuth   = true;
             $mail->Username   = 'sites@adaptcrew.com';
-            $mail->Password   = 'lqll hapi nxef nxrh';
+            $mail->Password   = 'tolj mffm jmqj ahso';
 
             $mail->setFrom('sites@adaptcrew.com', 'Adapt Crew');
             $mail->addAddress('contact@mega-contractors.com');
@@ -105,7 +105,7 @@ class MailController extends Controller
             $mail->Port       = 465;
             $mail->SMTPAuth   = true;
             $mail->Username   = 'sites@adaptcrew.com';
-            $mail->Password   = 'lqll hapi nxef nxrh';
+            $mail->Password   = 'tolj mffm jmqj ahso';
 
             $mail->setFrom('sites@adaptcrew.com', 'Adapt Crew');
             $mail->addAddress('contact@mega-contractors.com');
@@ -151,7 +151,7 @@ class MailController extends Controller
             $mail->Port       = 465;
             $mail->SMTPAuth   = true;
             $mail->Username   = 'sites@adaptcrew.com';
-            $mail->Password   = 'lqll hapi nxef nxrh';
+            $mail->Password   = 'tolj mffm jmqj ahso';
 
             $mail->setFrom('sites@adaptcrew.com', 'Adapt Crew');
             $mail->addAddress('contact@mega-contractors.com');
@@ -172,7 +172,7 @@ class MailController extends Controller
 
         } catch (Exception $e) {
 
-            $error = 'Error sending this message. Please check and try again...';
+            $error = 'Error sending this message. Please check and try again...'. $e;
             return redirect()->route('home')->with('error', $error);
 
         }
@@ -192,7 +192,7 @@ class MailController extends Controller
             $mail->Port       = 465;
             $mail->SMTPAuth   = true;
             $mail->Username   = 'sites@adaptcrew.com';
-            $mail->Password   = 'lqll hapi nxef nxrh';
+            $mail->Password   = 'tolj mffm jmqj ahso';
 
             $mail->setFrom('sites@adaptcrew.com', 'Adapt Crew');
             $mail->addAddress('contact@mega-contractors.com');
@@ -213,6 +213,43 @@ class MailController extends Controller
 
             $error = 'Error sending this message. Please check and try again...';
             return redirect()->route('investment')->with('error', $error);
+        }
+    }
+
+    public function sendContactEmailFromCookiesForm(Request $request)
+    {
+        $data =  $request->all();
+
+        $mail = new PHPMailer(true);
+
+        try {
+
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'sites@adaptcrew.com';
+            $mail->Password   = 'tolj mffm jmqj ahso';
+
+            $mail->setFrom('sites@adaptcrew.com', 'Adapt Crew');
+            $mail->addAddress('contact@mega-contractors.com');
+
+            $mail->isHTML(true);
+            $mail->Subject = 'Contact Message From Cookies Page';
+            $mail->Body    = 
+            'Name: ' . $data['name'].'<br>'.
+            'Email: ' . $data['email'].'<br>';
+
+            $mail->send();
+
+            $success = 'Message sent successfully!';
+            return redirect()->route('cookies')->with('success', $success);
+
+        } catch (Exception $e) {
+
+            $error = 'Error sending this message. Please check and try again...';
+            return redirect()->route('coming-soon')->with('error', $error);
         }
     }
 }
